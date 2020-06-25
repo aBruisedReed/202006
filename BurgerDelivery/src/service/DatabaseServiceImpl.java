@@ -15,14 +15,13 @@ public class DatabaseServiceImpl implements DatabaseService{
 		// TODO Auto-generated method stub
 		try {
 			con = DBConnection.getConnection();
-			String sql = "insert into member values(?,?,?,?,?,?)";
+			String sql = "insert into member values(?,?,?,?,?)";
 			ps = con.prepareStatement(sql);
 			ps.setString(1,member.getId());
 			ps.setString(2,member.getPw());
 			ps.setString(3, member.getName());
-			ps.setString(4, member.getGender());
-			ps.setString(5, member.getAge());
-			ps.setInt(6, member.getHobby());
+			ps.setString(4, member.getAddress());
+			ps.setString(5, member.getPhone());
 			ps.executeUpdate();
 		}catch(Exception e) {
 			e.printStackTrace();
