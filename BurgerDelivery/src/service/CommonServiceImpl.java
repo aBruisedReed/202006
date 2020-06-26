@@ -40,6 +40,26 @@ public class CommonServiceImpl implements CommonService {
 		
 		return root;
 	}
+	
+	public Parent showWindow(Stage s,String formPath, Object obj) {
+		// TODO Auto-generated method stub
+		FXMLLoader loader = new FXMLLoader(getClass().getResource(formPath));
+		Parent root = null;
+		
+		try {
+			root = loader.load();
+			s.setScene(new Scene(root));
+		} catch(IOException e) {
+			e.printStackTrace();
+		}
+		root.setUserData(obj);
+		Controller ctrler = loader.getController();
+		ctrler.setRoot(root);
+		
+		s.show();
+		
+		return root;
+	}
 
 	@Override
 	public void ErrorMsg(String title, String headerStr, String ContentTxt) {
