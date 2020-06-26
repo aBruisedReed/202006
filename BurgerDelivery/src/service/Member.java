@@ -1,12 +1,20 @@
 package service;
-
+/*
+ * 사용 테이블 
+create table member {
+	name varchar(20),
+	id varchar(20),
+	pw varchar(20),
+	address varchar(20),
+	phone varchar(20)
+}
+ */
 public class Member {
 	private String name;
 	private String id;
 	private String pw;
-	private String gender;
-	private String age;
-	private int hobby;
+	private String address;
+	private String phone;
 	
 	public String getName() {
 		return name;
@@ -26,22 +34,16 @@ public class Member {
 	public void setPw(String pw) {
 		this.pw = pw;
 	}
-	public String getGender() {
-		return gender;
+	public String getAddress() {
+		return address;
 	}
-	public void setGender(String gender) {
-		this.gender = gender;
+	public void setAddress(String address) {
+		this.address = address;
 	}
-	public String getAge() {
-		return age;
+	public String getPhone() {
+		return phone;
 	}
-	public void setAge(String age) {
-		this.age = age;
-	}
-	public int getHobby() {
-		return hobby;
-	}
-	public void setHobby(int hobby) {
-		this.hobby = hobby;
+	public void setPhone(String phone) {
+		this.phone = phone;
 	}
 }
