@@ -33,4 +33,10 @@ public class Goods {
 	public void setPrice(int price) {
 		this.price = price;
 	}
+	public int getKcal() {
+		return kcal;
+	}
+	public void setKcal(int kcal) {
+		this.kcal = kcal;
+	}
 }
