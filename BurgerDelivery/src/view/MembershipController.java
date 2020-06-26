@@ -96,4 +96,8 @@ public class MembershipController extends Controller implements Initializable {
 		s.close();
 		
 	}
+	
+	public void openFindAddress() {
+		membershipServ.openFindAddress();
+	}
 }

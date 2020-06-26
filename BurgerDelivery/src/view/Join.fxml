@@ -28,7 +28,7 @@
    <bottom>
       <HBox alignment="CENTER" prefHeight="96.0" prefWidth="492.0" spacing="60.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="joinBtn" onAction="#MembershipProc" mnemonicParsing="false" prefWidth="120.0" style="-fx-background-color: DB0000; -fx-background-radius: 20;" text="회원가입" textFill="WHITE">
+            <Button fx:id="joinBtn" mnemonicParsing="false" onAction="#MembershipProc" prefWidth="120.0" style="-fx-background-color: DB0000; -fx-background-radius: 20;" text="회원가입" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="17.0" />
                </font>
@@ -147,7 +147,7 @@
                   <Insets />
                </opaqueInsets>
             </Button>
-            <Button mnemonicParsing="false" style="-fx-background-color: #DB0000; -fx-background-radius: 20;" text="주소검색" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="5">
+            <Button mnemonicParsing="false" onAction="#openFindAddress" style="-fx-background-color: #DB0000; -fx-background-radius: 20;" text="주소검색" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="5">
                <font>
                   <Font name="Arial Bold" size="17.0" />
                </font>

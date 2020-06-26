@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="269.0" prefWidth="405.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Form.Controller">
+<AnchorPane prefHeight="269.0" prefWidth="405.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.LoginController">
    <children>
       <BorderPane layoutX="6.0" layoutY="69.0" prefHeight="200.0" prefWidth="200.0">
          <bottom>

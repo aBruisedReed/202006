@@ -35,7 +35,7 @@ public class LoginServiceImpl implements LoginService{
 		// TODO Auto-generated method stub
 		CommonService comSrv = new CommonServiceImpl();
 		Stage loginForm = new Stage();
-		Parent form = comSrv.showWindow(loginForm, "../view/Login.fxml");
+		Parent form = comSrv.showWindow(loginForm, "../view/LoginForm.fxml");
 		
 		return form;
 	}
