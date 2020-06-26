@@ -12,7 +12,7 @@ import javafx.stage.Stage;
 public class LoginServiceImpl implements LoginService{
 
 	@Override
-	public void LoginProc(Parent root) { // DB에서 아이디, 비밀번호를 가져옴
+	public void LoginProc(Parent root) { // DB에서 아이디, 비밀번호를 가져옴.
 		// TODO Auto-generated method stub
 		TextField idTxt = (TextField)root.lookup("#idTxt");
 		TextField pwTxt = (TextField)root.lookup("#pwTxt");
