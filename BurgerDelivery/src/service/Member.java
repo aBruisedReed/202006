@@ -1,5 +1,14 @@
 package service;
-
+/*
+ * 사용 테이블 
+create table member {
+	name varchar(20),
+	id varchar(20),
+	pw varchar(20),
+	address varchar(20),
+	phone varchar(20)
+}
+ */
 public class Member {
 	private String name;
 	private String id;
