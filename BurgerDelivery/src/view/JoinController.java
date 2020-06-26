@@ -32,5 +32,5 @@ public class JoinController extends Controller implements Initializable {
 	public void cancelProc(ActionEvent event) {
 		comSrv.WindowClose(event);
 	}
-
+	
 }

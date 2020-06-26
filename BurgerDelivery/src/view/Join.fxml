@@ -22,11 +22,11 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="636.0" prefWidth="492.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.JoinController">
+<BorderPane prefHeight="636.0" prefWidth="492.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.MembershipController">
    <bottom>
       <HBox alignment="CENTER" prefHeight="96.0" prefWidth="492.0" spacing="60.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="joinBtn" mnemonicParsing="false" prefWidth="120.0" text="회원가입">
+            <Button fx:id="joinBtn" onAction="#MembershipProc" mnemonicParsing="false" prefWidth="120.0" text="회원가입">
                <font>
                   <Font size="14.0" />
                </font>
