@@ -52,9 +52,9 @@
                   <Font name="Arial Bold" size="28.0" />
                </font>
             </Label>
-            <ImageView fitHeight="67.0" fitWidth="114.0" layoutX="94.0" layoutY="15.0">
+            <ImageView fitHeight="58.0" fitWidth="71.0" layoutX="131.0" layoutY="22.0">
                <image>
-                  <Image url="@../../../../../download.png" />
+                  <Image url="@../../resource/main/logo.png" />
                </image>
             </ImageView>
          </children>
