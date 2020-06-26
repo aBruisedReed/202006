@@ -41,7 +41,7 @@ public class CommonServiceImpl implements CommonService {
 		return root;
 	}
 	
-	public Parent showWindow(Stage s,String formPath, Object obj) {
+	public Parent showWindow(Stage s,String formPath, Object obj) { //폼 간의 데이터 전달 가능
 		// TODO Auto-generated method stub
 		FXMLLoader loader = new FXMLLoader(getClass().getResource(formPath));
 		Parent root = null;
