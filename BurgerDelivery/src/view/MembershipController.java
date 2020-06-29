@@ -5,11 +5,14 @@ import java.sql.SQLException;
 import java.util.Map;
 import java.util.ResourceBundle;
 
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import service.AddressData;
 import service.CommonService;
 import service.CommonServiceImpl;
 import service.DatabaseService;
@@ -17,22 +20,29 @@ import service.DatabaseServiceImpl;
 import service.Member;
 import service.MembershipService;
 import service.MembershipServiceImpl;
+import service.StringContainer;
 
 public class MembershipController extends Controller implements Initializable {
 	private Parent root;
 	private CommonService comSrv;
 	private MembershipService membershipServ;
+	DatabaseService db;
+	StringContainer string;
+	boolean flag;
 	@Override
 	public void setRoot(Parent root) {
 		// TODO Auto-generated method stub
 		this.root = root;
 	}
-
+	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		// TODO Auto-generated method stub
 		comSrv = new CommonServiceImpl();
 		membershipServ = new MembershipServiceImpl();
+		db = new DatabaseServiceImpl();
+		string = new StringContainer();
+		flag = true;
 	}
 	public void cancelProc(ActionEvent event) {
 		comSrv.WindowClose(event);
@@ -88,7 +98,6 @@ public class MembershipController extends Controller implements Initializable {
 		
 		System.out.println("전화번호 : "+" "+member.getPhone());
 		System.out.println("주소 : "+" "+member.getAddress());
-		//DatabaseService db = new DatabaseServiceImpl();
 		
 		//db.Insert(member);
 		comSrv.ErrorMsg("가입","가입 성공!","가입이 완료 되었습니다.");
@@ -97,7 +106,29 @@ public class MembershipController extends Controller implements Initializable {
 		
 	}
 	
-	public void openFindAddress() {
-		membershipServ.openFindAddress();
+	public void idCheckProc() {
+		String id = ((TextField)root.lookup("#txtID")).getText();
+		if(db.isOverrap(id)) {
+			comSrv.ErrorMsg("중복된 ID","중복된 ID","이미 존재하는 ID입니다.");
+		} else {
+			comSrv.ErrorMsg("사용 가능한 ID","사용 가능한 ID","사용 가능한 ID입니다.");
+		}
 	}
+	
+	public void openFindAddress() {
+		flag=true;
+		TextField tf = (TextField)root.lookup("#txtAddress");
+		Stage findAddress = new Stage();
+		comSrv.showWindow(findAddress, "../view/Address.fxml", string);
+		
+		root.setOnMouseMoved(e -> {
+//			System.out.println(string.getData());
+			if(flag) {
+				tf.setText(string.getData());
+				flag=!flag;
+			}
+		});
+	}
+	
+	
 }

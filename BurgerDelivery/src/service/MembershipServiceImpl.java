@@ -4,7 +4,8 @@ import javafx.scene.Parent;
 import javafx.stage.Stage;
 
 public class MembershipServiceImpl implements MembershipService {
-
+	StringBuilder addressData;
+	
 	@Override
 	public boolean comparePW(String pw, String pwOk) {
 		// TODO Auto-generated method stub
@@ -12,7 +13,7 @@ public class MembershipServiceImpl implements MembershipService {
 	}
 
 	@Override
-	public Parent openFindAddress() {
+	public Parent openFindAddress() { // 필요 없는 메소드
 		// TODO Auto-generated method stub
 		CommonService comSrv = new CommonServiceImpl();
 		Stage findAddress = new Stage();

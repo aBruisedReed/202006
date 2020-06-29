@@ -57,14 +57,14 @@ public class DatabaseServiceImpl implements DatabaseService{
 			rs = ps.executeQuery();
 			
 			if(rs.next()==true) {
-				return false;
+				return true;
 			}
 			rs.close();
 			ps.close();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return true;
+		return false;
 	}
 	
 
