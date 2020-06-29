@@ -121,11 +121,7 @@
                   <Insets />
                </GridPane.margin>
             </TextField>
-<<<<<<< HEAD
             <Button fx:id="idCheckButton" mnemonicParsing="false" onAction="#idCheckProc" style="-fx-background-color: #DB0000; -fx-background-radius: 20;" text="중복확인" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="1">
-=======
-            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #DB0000; -fx-background-radius: 20;" text="중복확인" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="1">
->>>>>>> branch 'master' of https://github.com/aBruisedReed/202006.git
                <GridPane.margin>
                   <Insets left="15.0" />
                </GridPane.margin>
@@ -136,11 +132,7 @@
                   <Insets />
                </opaqueInsets>
             </Button>
-<<<<<<< HEAD
             <Button fx:id="addressButton" mnemonicParsing="false" onAction="#openFindAddress" style="-fx-background-color: #DB0000; -fx-background-radius: 20;" text="주소검색" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="5">
-=======
-            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#openFindAddress" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #DB0000; -fx-background-radius: 20;" text="주소검색" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="5">
->>>>>>> branch 'master' of https://github.com/aBruisedReed/202006.git
                <font>
                   <Font name="Arial Bold" size="13.0" />
                </font>
