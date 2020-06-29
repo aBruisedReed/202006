@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
@@ -8,90 +9,97 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="269.0" prefWidth="405.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.LoginController">
+<AnchorPane prefHeight="269.0" prefWidth="410.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.LoginController">
    <children>
-      <BorderPane layoutX="6.0" layoutY="69.0" prefHeight="200.0" prefWidth="200.0">
+      <BorderPane layoutX="6.0" layoutY="69.0" prefHeight="200.0" prefWidth="401.0">
          <bottom>
-            <HBox prefHeight="100.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+            <HBox alignment="CENTER" prefHeight="78.0" prefWidth="392.0" spacing="30.0">
                <children>
-                  <Button fx:id="MemberBtn" mnemonicParsing="false" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: #df0000; -fx-background-radius: 20;" text="회원가입" textFill="WHITE">
+                  <Button fx:id="MemberBtn" mnemonicParsing="false" onAction="#joinProc" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: #df0000; -fx-background-radius: 20;" text="회원가입" textFill="WHITE">
                      <HBox.margin>
-                        <Insets bottom="20.0" left="25.0" right="30.0" top="30.0" />
+                        <Insets />
                      </HBox.margin>
                      <font>
                         <Font name="Arial Bold" size="17.0" />
                      </font></Button>
-                  <Button fx:id="LcancelBtn" mnemonicParsing="false" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: #df0000; -fx-background-radius: 20;" text="취소" textFill="WHITE">
+                  <Button fx:id="LcancelBtn" mnemonicParsing="false" onAction="#cancelProc" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: #df0000; -fx-background-radius: 20;" text="취소" textFill="WHITE">
                      <HBox.margin>
-                        <Insets bottom="20.0" left="25.0" right="30.0" top="30.0" />
+                        <Insets />
                      </HBox.margin>
                      <font>
                         <Font name="Arial Bold" size="17.0" />
                      </font></Button>
                </children>
+               <padding>
+                  <Insets bottom="10.0" />
+               </padding>
             </HBox>
          </bottom>
-         <left>
-            <GridPane prefHeight="170.0" prefWidth="243.0" BorderPane.alignment="CENTER">
-              <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="147.0" minWidth="10.0" prefWidth="76.0" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="201.0" minWidth="10.0" prefWidth="189.0" />
-              </columnConstraints>
-              <rowConstraints>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-              </rowConstraints>
+         <center>
+            <HBox alignment="CENTER" prefHeight="122.0" prefWidth="290.0" spacing="10.0" BorderPane.alignment="CENTER">
                <children>
-                  <Label text="ID">
-                     <font>
-                        <Font size="24.0" />
-                     </font>
-                     <GridPane.margin>
-                        <Insets left="15.0" />
-                     </GridPane.margin>
-                  </Label>
-                  <Label text="PW" GridPane.rowIndex="1">
-                     <font>
-                        <Font size="24.0" />
-                     </font>
-                     <GridPane.margin>
-                        <Insets left="15.0" />
-                     </GridPane.margin>
-                  </Label>
-                  <TextField fx:id="LoginID" prefHeight="40.0" prefWidth="150.0" promptText="ID 입력" GridPane.columnIndex="1">
-                     <GridPane.margin>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                     </GridPane.margin></TextField>
-                  <TextField fx:id="PassID" prefHeight="40.0" prefWidth="150.0" promptText="PW 입력" GridPane.columnIndex="1" GridPane.rowIndex="1">
-                     <GridPane.margin>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                     </GridPane.margin></TextField>
-               </children>
-               <BorderPane.margin>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </BorderPane.margin>
-            </GridPane>
-         </left>
-         <right>
-            <HBox prefHeight="109.0" prefWidth="177.0" BorderPane.alignment="CENTER">
-               <children>
-                  <Button fx:id="LoginBtn" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #df0000; -fx-background-radius: 20;" text="로그인" textFill="WHITE">
-                     <HBox.margin>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                     </HBox.margin>
+                  <GridPane alignment="CENTER" prefHeight="129.0" prefWidth="269.0">
+                     <children>
+                        <Label text="ID" textFill="#838383">
+                           <font>
+                              <Font name="Arial Bold" size="19.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="15.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label text="PW" textFill="#838383" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Arial Bold" size="19.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="15.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <TextField fx:id="LoginID1" prefHeight="30.0" prefWidth="200.0" promptText="ID 입력" GridPane.columnIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <TextField fx:id="PassID1" prefHeight="30.0" prefWidth="200.0" promptText="PW 입력" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </GridPane.margin>
+                        </TextField>
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="147.0" minWidth="10.0" prefWidth="53.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="216.0" minWidth="10.0" prefWidth="216.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+                  <Button fx:id="LoginBtn" alignment="CENTER" mnemonicParsing="false" onAction="#loginProc" prefHeight="81.0" prefWidth="90.0" style="-fx-background-color: #df0000; -fx-background-radius: 20;" text="로그인" textFill="WHITE">
                      <font>
                         <Font name="Arial Bold" size="17.0" />
-                     </font></Button>
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
                </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+               <padding>
+                  <Insets bottom="10.0" right="10.0" top="10.0" />
+               </padding>
             </HBox>
-         </right>
+         </center>
       </BorderPane>
-      <ImageView fitHeight="60.0" fitWidth="100.0" layoutX="80.0" layoutY="7.0">
+      <ImageView fitHeight="44.0" fitWidth="53.0" layoutX="100.0" layoutY="21.0">
          <image>
             <Image url="@../../resource/main/logo.png" />
          </image>
       </ImageView>
-      <Label layoutX="194.0" layoutY="37.0" text="McDelivery">
+      <Label layoutX="157.0" layoutY="37.0" text="McDelivery">
          <font>
             <Font name="Arial Bold" size="28.0" />
          </font>

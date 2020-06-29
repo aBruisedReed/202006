@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
@@ -7,19 +8,25 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<Pane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.AfterLoginController">
    <children>
       <HBox alignment="CENTER" layoutX="36.0" layoutY="93.0" prefHeight="264.0" prefWidth="528.0" spacing="30.0">
          <children>
-            <Button fx:id="orderBtn" mnemonicParsing="false" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DB0000; -fx-background-radius: 20;" text="주문하기" textFill="WHITE">
+            <Button fx:id="orderBtn" mnemonicParsing="false" onAction="#orderStart" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DB0000; -fx-background-radius: 20;" text="주문하기" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="23.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
             <Button fx:id="orderListBtn" mnemonicParsing="false" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffd000; -fx-background-radius: 20;" text="주문내역 조회">
                <font>
                   <Font name="Arial Bold" size="23.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
          </children>
       </HBox>

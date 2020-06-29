@@ -35,7 +35,7 @@
    <left>
       <Pane prefHeight="336.0" prefWidth="109.0" BorderPane.alignment="CENTER">
          <children>
-            <Label layoutX="32.0" layoutY="18.0" text="Order" textFill="#8a8a8a">
+            <Label layoutX="32.0" layoutY="18.0" text="Order" textFill="#5d5d5d">
                <font>
                   <Font size="23.0" />
                </font>
@@ -54,16 +54,16 @@
       </Pane>
    </left>
    <center>
-      <VBox alignment="CENTER_LEFT" prefHeight="260.0" prefWidth="434.0" BorderPane.alignment="CENTER">
+      <VBox alignment="CENTER_LEFT" prefHeight="276.0" prefWidth="455.0" BorderPane.alignment="CENTER">
          <opaqueInsets>
             <Insets />
          </opaqueInsets>
          <children>
-            <TableView fx:id="orderTable" prefHeight="271.0" prefWidth="434.0" style="-fx-background-color: #ffffff;">
+            <TableView fx:id="orderTable" prefHeight="255.0" prefWidth="456.0" style="-fx-background-color: #ffffff;" stylesheets="@MainTheme.css">
               <columns>
-                <TableColumn prefWidth="235.0" text="상품 내역" />
-                <TableColumn minWidth="0.0" prefWidth="97.0" text="주문번호" />
-                  <TableColumn minWidth="0.0" prefWidth="101.0" text="주문자" />
+                <TableColumn minWidth="0.0" prefWidth="103.0" text="주문번호" />
+                <TableColumn prefWidth="245.0" text="상품 내역" />
+                  <TableColumn minWidth="0.0" prefWidth="103.0" text="주문자" />
               </columns>
                <padding>
                   <Insets top="15.0" />
@@ -84,6 +84,6 @@
       </HBox>
    </bottom>
    <right>
-      <Pane prefHeight="276.0" prefWidth="57.0" BorderPane.alignment="CENTER" />
+      <Pane prefHeight="276.0" prefWidth="35.0" BorderPane.alignment="CENTER" />
    </right>
 </BorderPane>
