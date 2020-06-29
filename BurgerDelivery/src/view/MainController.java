@@ -44,6 +44,13 @@ public class MainController extends Controller implements Initializable {
 		}
 	}
 	
+	 public void ivProc() {
+		 if(flag) {
+			animMain();
+			flag=false;
+		 }
+	 }
+	
 	public void animMain() {
 		ImageView imageView1 = (ImageView) root.lookup("#imageView1");
 		
