@@ -107,11 +107,17 @@ public class MembershipController extends Controller implements Initializable {
 	}
 	
 	public void idCheckProc() {
-		String id = ((TextField)root.lookup("#txtID")).getText();
-		if(db.isOverrap(id)) {
-			comSrv.ErrorMsg("중복된 ID","중복된 ID","이미 존재하는 ID입니다.");
-		} else {
-			comSrv.ErrorMsg("사용 가능한 ID","사용 가능한 ID","사용 가능한 ID입니다.");
+		if(((TextField)root.lookup("#txtID")).getText().isEmpty()) {
+			comSrv.ErrorMsg("Error", "아이디를 입력하세요.");
+			((TextField)root.lookup("#txtID")).requestFocus();
+		}
+		else {
+			String id = ((TextField)root.lookup("#txtID")).getText();
+			if(db.isOverrap(id)) {
+				comSrv.ErrorMsg("중복된 ID","중복된 ID","이미 존재하는 ID입니다.");
+			} else {
+				comSrv.ErrorMsg("사용 가능한 ID","사용 가능한 ID","사용 가능한 ID입니다.");
+			}
 		}
 	}
 	

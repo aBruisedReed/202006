@@ -15,6 +15,11 @@
 	-fx-text-fill: #5D5D5D;
 }
 
+.tab:selected {
+	-fx-background-color: #FFD000;
+	-fx-font-family: "Arial";
+}
+
 .label-bright {
     -fx-font-size: 11pt;
     -fx-font-family: "Arial";

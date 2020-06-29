@@ -35,6 +35,11 @@ public class AddressController extends Controller implements Initializable {
 	}
 	
 	public void findButtonOnClick() {
+		if(((TextField)root.lookup("#findTextField")).getText().isEmpty()) {
+			comSrv.ErrorMsg("Error", "주소를 입력하세요.");
+			((TextField)root.lookup("#findTextField")).requestFocus();
+		}
+		else {
 		string = (StringContainer) root.getUserData();
 		String s = ((TextField) root.lookup("#findTextField")).getText();
 		ArrayList<AddressData> aDataList = FindAddress.find(s, 1); // find 두번째 인자로 50개 이상일 경우 페이지 구현해야함
@@ -61,6 +66,7 @@ public class AddressController extends Controller implements Initializable {
 				string.setData(null);
 			}
 		});
+		}
 	}
 	
 	public void okProc(ActionEvent event) {
