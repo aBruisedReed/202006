@@ -7,4 +7,6 @@ public interface LoginService {
 	public void LoginProc(Parent root);
 	public Parent OpenLoginForm();
 	public Parent OpenJoinForm();
+	public Parent AfterLogin();
+	public Parent OrderStart();
 }

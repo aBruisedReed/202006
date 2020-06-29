@@ -14,19 +14,20 @@ public class LoginServiceImpl implements LoginService{
 	@Override
 	public void LoginProc(Parent root) { // DB에서 아이디, 비밀번호를 가져옴
 		// TODO Auto-generated method stub
-		TextField idTxt = (TextField)root.lookup("#idTxt");
-		TextField pwTxt = (TextField)root.lookup("#pwTxt");
-		
-		DatabaseService db = new DatabaseServiceImpl();
-		boolean login = db.Select(idTxt.getText(), pwTxt.getText());
-		CommonService com = new CommonServiceImpl();
-		if(login) {
-			com.ErrorMsg("로그인 되었습니다.");
-			System.out.println("ID : " + idTxt.getText() +  ", PW : " 
-					+ pwTxt.getText() + " 가 입력 되었습니다");
-		} else {
-			com.ErrorMsg("아이디 패스워드가 틀립니다.");
-		}
+//		TextField idTxt = (TextField)root.lookup("#idTxt");
+//		TextField pwTxt = (TextField)root.lookup("#pwTxt");
+//		
+//		DatabaseService db = new DatabaseServiceImpl();
+//		boolean login = db.Select(idTxt.getText(), pwTxt.getText());
+//		CommonService com = new CommonServiceImpl();
+//		if(login) {
+//			com.ErrorMsg("로그인 되었습니다.");
+//			System.out.println("ID : " + idTxt.getText() +  ", PW : " 
+//					+ pwTxt.getText() + " 가 입력 되었습니다");
+			AfterLogin();
+//		} else {
+//			com.ErrorMsg("아이디 패스워드가 틀립니다.");
+//		}
 				
 	}
 
@@ -49,6 +50,24 @@ public class LoginServiceImpl implements LoginService{
 		
 		return form;
 	}
+	
+	public Parent AfterLogin() { // 로그인 이후 창을 열어줌
+		// TODO Auto-generated method stub
+		CommonService comSrv = new CommonServiceImpl();
+		Stage afterLoginForm = new Stage();
+		Parent form = comSrv.showWindow(afterLoginForm, "../view/AfterLogin.fxml");
+		
+		return form;
+	}
+	
+	public Parent OrderStart() { // 로그인 이후 주문메뉴 창을 열어줌
+		// TODO Auto-generated method stub
+		CommonService comSrv = new CommonServiceImpl();
+		Stage menu = new Stage();
+		Parent form = comSrv.showWindow(menu, "../view/Menu.fxml");
+		
+		return form;
+	} 
 
 }
 
