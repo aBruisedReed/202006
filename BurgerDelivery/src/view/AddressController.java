@@ -70,8 +70,12 @@ public class AddressController extends Controller implements Initializable {
 	}
 	
 	public void okProc(ActionEvent event) {
-		if(string.getData() == null) {
-			comSrv.ErrorMsg("주소를 선택하세요", "주소를 선택하세요.", "선택된 항목이 없습니다.");
+		if(string != null) {
+			if(string.getData() == null) {
+				comSrv.ErrorMsg("주소를 선택하세요", "주소를 선택하세요.", "선택된 항목이 없습니다.");
+			} else {
+				comSrv.WindowClose(event);
+			}
 		} else {
 			comSrv.WindowClose(event);
 		}

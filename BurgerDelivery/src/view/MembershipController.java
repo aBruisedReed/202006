@@ -135,6 +135,4 @@ public class MembershipController extends Controller implements Initializable {
 			}
 		});
 	}
-	
-	
 }
