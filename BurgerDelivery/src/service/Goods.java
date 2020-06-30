@@ -10,33 +10,30 @@ create table goods {
 }
  */
 public class Goods { 
-	String category;
 	String name;
-	int price;
-	int kcal;
+	String price;
+	int amount;
 	
-	public String getCategory() {
-		return category;
+	public Goods() {
+		
 	}
-	public void setCategory(String category) {
-		this.category = category;
-	}
+	
 	public String getName() {
 		return name;
 	}
 	public void setName(String name) {
 		this.name = name;
 	}
-	public int getPrice() {
+	public String getPrice() {
 		return price;
 	}
-	public void setPrice(int price) {
+	public void setPrice(String price) {
 		this.price = price;
 	}
-	public int getKcal() {
-		return kcal;
+	public int getAmount() {
+		return amount;
 	}
-	public void setKcal(int kcal) {
-		this.kcal = kcal;
+	public void setAmount(int amount) {
+		this.amount = amount;
 	}
 }

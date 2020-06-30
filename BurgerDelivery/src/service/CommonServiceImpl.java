@@ -1,6 +1,7 @@
 package service;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -58,6 +59,27 @@ public class CommonServiceImpl implements CommonService {
 		}
 		
 		root.setUserData(string);
+		Controller ctrler = loader.getController();
+		ctrler.setRoot(root);
+		
+		s.show();
+		
+		return root;
+	}
+	
+	public Parent showWindow(Stage s, String formPath, ArrayList<String> goods) { //폼 간의 데이터 전달 가능
+		// TODO Auto-generated method stub
+		FXMLLoader loader = new FXMLLoader(getClass().getResource(formPath));
+		Parent root = null;
+		
+		try {
+			root = loader.load();
+			s.setScene(new Scene(root));
+		} catch(IOException e) {
+			e.printStackTrace();
+		}
+		
+		root.setUserData(goods);
 		Controller ctrler = loader.getController();
 		ctrler.setRoot(root);
 		

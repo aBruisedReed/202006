@@ -94,27 +94,27 @@ public class DatabaseServiceImpl implements DatabaseService{
 	@Override
 	public Goods selectGoods(String name) {
 		Goods goods = new Goods();
-		try {
-			con = DBConnection.getConnection();
-			String sql = "select * from member where name=?";
-			ps = con.prepareStatement(sql);
-			ps.setString(1,name);
-			rs = ps.executeQuery();	
-
-			if(!rs.next()) { //받은 데이터가 없다면
-				System.out.println("일치하는 데이터 없음");
-				return goods=null;
-			}
-			goods.setCategory(rs.getString("category"));
-			goods.setName(rs.getString("name"));
-			goods.setName(rs.getString("name"));
-			goods.setPrice(rs.getInt("price"));
-			goods.setKcal(rs.getInt("kcal"));
-			rs.close();
-			ps.close();
-		}catch(Exception e) {
-			e.printStackTrace();
-		}
+//		try {
+//			con = DBConnection.getConnection();
+//			String sql = "select * from member where name=?";
+//			ps = con.prepareStatement(sql);
+//			ps.setString(1,name);
+//			rs = ps.executeQuery();	
+//
+//			if(!rs.next()) { //받은 데이터가 없다면
+//				System.out.println("일치하는 데이터 없음");
+//				return goods=null;
+//			}
+//			goods.setCategory(rs.getString("category"));
+//			goods.setName(rs.getString("name"));
+//			goods.setName(rs.getString("name"));
+//			goods.setPrice(rs.getInt("price"));
+//			goods.setKcal(rs.getInt("kcal"));
+//			rs.close();
+//			ps.close();
+//		}catch(Exception e) {
+//			e.printStackTrace();
+//		}
 		return goods;
 	}
 }

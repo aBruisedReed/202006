@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.paint.*?>
-<?import javafx.scene.shape.*?>
-<?import javafx.scene.text.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.geometry.*?>
-<?import javafx.scene.image.*?>
-<?import java.lang.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseMoved="#orderOn" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.OrderListController">
     <top>
       <HBox alignment="CENTER" prefHeight="64.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
@@ -61,9 +68,9 @@
          <children>
             <TableView fx:id="orderTable" prefHeight="255.0" prefWidth="456.0" style="-fx-background-color: #ffffff;" stylesheets="@MainTheme.css">
               <columns>
-                <TableColumn minWidth="0.0" prefWidth="103.0" text="주문번호" />
-                <TableColumn prefWidth="245.0" text="상품 내역" />
-                  <TableColumn minWidth="0.0" prefWidth="103.0" text="주문자" />
+                <TableColumn minWidth="0.0" prefWidth="274.0" text="상품명" />
+                <TableColumn prefWidth="111.0" text="가격" />
+                  <TableColumn minWidth="0.0" prefWidth="66.0" text="수량" />
               </columns>
                <padding>
                   <Insets top="15.0" />
