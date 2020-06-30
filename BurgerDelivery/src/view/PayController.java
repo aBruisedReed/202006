@@ -6,6 +6,7 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import service.CommonServiceImpl;
 import service.SingletonData;
@@ -47,5 +48,15 @@ public class PayController extends Controller implements Initializable {
 	
 	public void onCancel(ActionEvent event) { //취소 버튼
 		comSrv.WindowClose(event);
+	}
+	
+	public void ch1On() { // 체크 박스 중첩 선택 방지
+		CheckBox cb2 = (CheckBox)root.lookup("#ch2");
+		cb2.setSelected(false);
+	}
+	
+	public void ch2On() {
+		CheckBox cb1 = (CheckBox)root.lookup("#ch1");
+		cb1.setSelected(false);
 	}
 }

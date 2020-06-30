@@ -46,12 +46,12 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <CheckBox mnemonicParsing="false" text="신청" GridPane.rowIndex="5">
+      <CheckBox fx:id="ch1" mnemonicParsing="false" onAction="#ch1On" text="신청" GridPane.rowIndex="5">
          <GridPane.margin>
             <Insets />
          </GridPane.margin>
       </CheckBox>
-      <CheckBox mnemonicParsing="false" text="미신청" GridPane.halignment="RIGHT" GridPane.rowIndex="5">
+      <CheckBox fx:id="ch2" mnemonicParsing="false" onAction="#ch2On" text="미신청" GridPane.halignment="RIGHT" GridPane.rowIndex="5">
          <GridPane.margin>
             <Insets right="60.0" />
          </GridPane.margin>
