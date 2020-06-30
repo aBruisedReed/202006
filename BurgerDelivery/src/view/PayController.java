@@ -35,6 +35,8 @@ public class PayController extends Controller implements Initializable {
 		if(flag==false) {
 			return;
 		}
+		CheckBox cb2 = (CheckBox)root.lookup("#ch2");
+		cb2.setSelected(true);
 		SingletonData sd = SingletonData.getInstance();
 		Label total = (Label) root.lookup("#totalPrice");
 		total.setText(sd.getTotalPrice());

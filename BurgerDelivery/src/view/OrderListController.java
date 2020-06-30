@@ -5,6 +5,7 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.control.Label;
@@ -73,7 +74,8 @@ public class OrderListController extends Controller implements Initializable {
 		flag = false;
 	}
 	
-	public void payBtnProc() {
+	public void payBtnProc(ActionEvent event) {
+		comSrv.WindowClose(event);
 		Stage pay = new Stage();
 		comSrv.showWindow(pay, "../view/Pay.fxml"); //가격 전달해야함
 	}
