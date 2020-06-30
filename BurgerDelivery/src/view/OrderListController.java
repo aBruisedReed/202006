@@ -11,6 +11,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
+import service.CommonServiceImpl;
 import service.Goods;
 
 public class OrderListController extends Controller implements Initializable {
@@ -18,6 +20,7 @@ public class OrderListController extends Controller implements Initializable {
 	ArrayList<String> goods;
 	boolean flag;
 	int total;
+	CommonServiceImpl comSrv;
 	
 	@Override
 	public void setRoot(Parent root) {
@@ -29,6 +32,7 @@ public class OrderListController extends Controller implements Initializable {
 	public void initialize(URL location, ResourceBundle resources) {
 		// TODO Auto-generated method stub
 		flag = true;
+		comSrv = new CommonServiceImpl();
 	}
 	
 	public void orderOn() {
@@ -67,6 +71,7 @@ public class OrderListController extends Controller implements Initializable {
 	}
 	
 	public void payBtnProc() {
-		
+		Stage pay = new Stage();
+		comSrv.showWindow(pay, "../view/Pay.fxml"); //가격 전달해야함
 	}
 }

@@ -6,6 +6,7 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
+import javafx.stage.Stage;
 import service.CommonService;
 import service.CommonServiceImpl;
 import service.LoginService;
@@ -35,5 +36,9 @@ public class AfterLoginController extends Controller implements Initializable {
 		// TODO Auto-generated method stub
 		this.root = root;
 	}
-
+	
+	public void orderCheck() {
+		Stage orderCheck = new Stage();
+		comSrv.showWindow(orderCheck, "../view/CheckOrder.fxml");
+	}
 }
