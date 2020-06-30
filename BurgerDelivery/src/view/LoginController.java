@@ -17,6 +17,7 @@ import service.LoginService;
 import service.LoginServiceImpl;
 import service.MembershipService;
 import service.MembershipServiceImpl;
+import service.SingletonData;
 
 public class LoginController extends Controller implements Initializable {
 	private Parent root;
@@ -44,20 +45,24 @@ public class LoginController extends Controller implements Initializable {
 //			System.out.println("비어있습니다.");
 			return;
 		}
-//		else {
-//			TextField idTxt = (TextField)root.lookup("#LoginID1");
-//			TextField pwTxt = (TextField)root.lookup("#PassID1");
+		else {
+			TextField idTxt = (TextField)root.lookup("#LoginID1");
+			TextField pwTxt = (TextField)root.lookup("#PassID1");
 //			
 //			DatabaseService db = new DatabaseServiceImpl();
 //			boolean login = db.Select(idTxt.getText(), pwTxt.getText());
 //			CommonService com = new CommonServiceImpl();
 //			if(login) {
 //				com.ErrorMsg("로그인 되었습니다.");
+			
+				SingletonData sd = SingletonData.getInstance(); //현재 로그인한 회원 정보 기록용
+				sd.setCurrentUserId(idTxt.getText());
+				
 				loginSrv.AfterLogin();
 //			} else {
 //				com.ErrorMsg("아이디 패스워드가 틀립니다.");
 //			}
-//		}
+		}
 	}
 	
 	

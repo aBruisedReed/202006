@@ -14,6 +14,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import service.CommonServiceImpl;
 import service.Goods;
+import service.SingletonData;
 
 public class OrderListController extends Controller implements Initializable {
 	Parent root;
@@ -66,6 +67,8 @@ public class OrderListController extends Controller implements Initializable {
 		}
 		Label totalLabel = (Label) root.lookup("#total");
 		totalLabel.setText("합계 금액 : "+formatter.format(total)+" 원");
+		SingletonData sd = SingletonData.getInstance();
+		sd.setTotalPrice(formatter.format(total)+" 원");
 		
 		flag = false;
 	}

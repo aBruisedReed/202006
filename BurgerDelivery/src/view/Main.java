@@ -6,6 +6,7 @@ import javafx.application.Application;
 import javafx.stage.Stage;
 import service.CommonService;
 import service.CommonServiceImpl;
+import service.SingletonData;
 
 public class Main extends Application {
 
