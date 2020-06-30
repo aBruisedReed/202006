@@ -3,14 +3,18 @@ package view;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.control.Label;
+import service.CommonServiceImpl;
 import service.SingletonData;
 
 public class PayController extends Controller implements Initializable {
 	Parent root;
 	boolean flag;
+	CommonServiceImpl comSrv;
+	
 	
 	@Override
 	public void setRoot(Parent root) {
@@ -22,6 +26,7 @@ public class PayController extends Controller implements Initializable {
 	public void initialize(URL location, ResourceBundle resources) {
 		// TODO Auto-generated method stub
 		flag=true;
+		comSrv = new CommonServiceImpl();
 	}
 	
 	
@@ -40,7 +45,7 @@ public class PayController extends Controller implements Initializable {
 		
 	}
 	
-	public void onCancel() { //취소 버튼
-		
+	public void onCancel(ActionEvent event) { //취소 버튼
+		comSrv.WindowClose(event);
 	}
 }
