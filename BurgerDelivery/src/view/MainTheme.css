@@ -127,3 +127,15 @@
     -fx-background-color: -fx-focus-color;
     -fx-text-fill: #ffffff;
 }
+
+.choice-box {
+    -fx-background-color: white;
+    -fx-border-color: #5D5D5D;
+    -fx-text-fill: #5D5D5D;
+    -fx-font-size: 11px;
+}
+
+.choice-box .context-menu {
+	-fx-background-color: white;
+	-fx-text-fill: #5D5D5D;
+}
