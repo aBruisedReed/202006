@@ -1,11 +1,13 @@
 package view;
 
 import java.net.URL;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -15,6 +17,7 @@ public class OrderListController extends Controller implements Initializable {
 	Parent root;
 	ArrayList<String> goods;
 	boolean flag;
+	int total;
 	
 	@Override
 	public void setRoot(Parent root) {
@@ -29,6 +32,7 @@ public class OrderListController extends Controller implements Initializable {
 	}
 	
 	public void orderOn() {
+		total = 0;
 		if(flag==false) {
 			return;
 		}
@@ -46,16 +50,23 @@ public class OrderListController extends Controller implements Initializable {
 		nameColumn.setPrefWidth(340);
 		tv.getColumns().addAll(nameColumn, priceColumn, amountColumn);
 		
-		
+		DecimalFormat formatter = new DecimalFormat("###,###");
 		for(String good : goods) {
 			String[] goodDetail = good.split(",");
 			Goods goods = new Goods();
 			goods.setName(goodDetail[0]);
-			goods.setPrice(goodDetail[1]);
+			goods.setPrice(formatter.format(Integer.parseInt(goodDetail[1])));
 			goods.setAmount(Integer.parseInt(goodDetail[2]));
+			total += Integer.parseInt(goodDetail[1])*goods.getAmount();
 			tv.getItems().add(goods);
 		}
+		Label totalLabel = (Label) root.lookup("#total");
+		totalLabel.setText("합계 금액 : "+formatter.format(total)+" 원");
 		
 		flag = false;
+	}
+	
+	public void payBtnProc() {
+		
 	}
 }
