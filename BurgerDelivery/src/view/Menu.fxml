@@ -53,7 +53,7 @@
                                     <Insets left="70.0" top="10.0" />
                                  </VBox.margin>
                               </Label>
-                              <ChoiceBox fx:id="chSet5" prefWidth="150.0">
+                              <ChoiceBox fx:id="chSet5" prefWidth="150.0" style="-fx-background-color: white; -fx-border-color: #5D5D5D;">
                                  <VBox.margin>
                                     <Insets bottom="10.0" left="55.0" right="10.0" top="10.0" />
                                  </VBox.margin>
@@ -84,7 +84,7 @@
                                     <Insets left="60.0" top="10.0" />
                                  </VBox.margin>
                               </Label>
-                              <ChoiceBox fx:id="chSet6" prefWidth="150.0">
+                              <ChoiceBox fx:id="chSet6" prefWidth="150.0" style="-fx-background-color: white; -fx-border-color: #5D5D5D;">
                                  <VBox.margin>
                                     <Insets bottom="10.0" left="55.0" right="10.0" top="10.0" />
                                  </VBox.margin>
@@ -115,7 +115,7 @@
                                     <Insets left="60.0" top="10.0" />
                                  </VBox.margin>
                               </Label>
-                              <ChoiceBox fx:id="chSet3" prefWidth="150.0">
+                              <ChoiceBox fx:id="chSet3" prefWidth="150.0" style="-fx-background-color: white; -fx-border-color: #5D5D5D;" styleClass="combo-box" stylesheets="@MainTheme.css">
                                  <VBox.margin>
                                     <Insets bottom="10.0" left="55.0" right="10.0" top="10.0" />
                                  </VBox.margin>
@@ -147,7 +147,7 @@
                                     <Insets left="60.0" top="10.0" />
                                  </VBox.margin>
                               </Label>
-                              <ChoiceBox fx:id="chSet4" prefWidth="150.0">
+                              <ChoiceBox fx:id="chSet4" prefWidth="150.0" style="-fx-background-color: white; -fx-border-color: #5D5D5D;">
                                  <VBox.margin>
                                     <Insets bottom="10.0" left="55.0" right="10.0" top="10.0" />
                                  </VBox.margin>
@@ -179,7 +179,7 @@
                                     <Insets left="60.0" top="10.0" />
                                  </VBox.margin>
                               </Label>
-                              <ChoiceBox fx:id="chSet1" prefWidth="150.0">
+                              <ChoiceBox fx:id="chSet1" prefWidth="150.0" style="-fx-background-color: white; -fx-border-color: #5D5D5D;" stylesheets="@MainTheme.css">
                                  <VBox.margin>
                                     <Insets bottom="10.0" left="55.0" right="10.0" top="10.0" />
                                  </VBox.margin>
@@ -211,7 +211,7 @@
                                     <Insets left="70.0" top="10.0" />
                                  </VBox.margin>
                               </Label>
-                              <ChoiceBox fx:id="chSet2" prefWidth="150.0">
+                              <ChoiceBox fx:id="chSet2" prefWidth="150.0" style="-fx-background-color: white; -fx-border-color: #5D5D5D;">
                                  <VBox.margin>
                                     <Insets bottom="10.0" left="55.0" right="10.0" top="10.0" />
                                  </VBox.margin>
@@ -222,7 +222,7 @@
                   </GridPane>
                </content>
           </Tab>
-          <Tab  text="햄버거 단품">
+          <Tab text="햄버거 단품">
                <content>
                   <GridPane prefHeight="194.0" prefWidth="258.0">
                     <columnConstraints>
@@ -844,7 +844,7 @@
                                     <Insets left="100.0" top="10.0" />
                                  </VBox.margin>
                               </Label>
-                              <ChoiceBox fx:id="chSide1"  prefWidth="150.0">
+                              <ChoiceBox fx:id="chSide1" prefWidth="150.0">
                                  <VBox.margin>
                                     <Insets bottom="10.0" left="55.0" right="10.0" top="10.0" />
                                  </VBox.margin></ChoiceBox>
