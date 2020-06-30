@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane onMouseMoved="#paneProc" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.MainController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"  onMouseMoved="#paneProc" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.MainController">
    <center>
       <ImageView fx:id="imageView1" fitHeight="298.0" fitWidth="1244.0" onMouseMoved="#ivProc" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="TOP_LEFT">
          <image>
