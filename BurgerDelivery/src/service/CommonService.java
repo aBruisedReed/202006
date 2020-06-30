@@ -18,6 +18,7 @@ public interface CommonService {
 	public void ErrorMsg(String ContentTxt);
 	
 	public Map<String, TextField> getTextFieldInfo(Parent root, String[] txtFldArr);
+	public boolean isEmpty(Map<String, TextField> txtFldMap, String[] txtFldArr);
 	public boolean isEmpty(Map<String, TextField> txtFldMap, String[] txtFldArr, String[] list);
 }
 
