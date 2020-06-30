@@ -121,6 +121,19 @@ public class CommonServiceImpl implements CommonService {
 		}
 		return txtFldMap;
 	}
+	
+	@Override
+	public boolean isEmpty(Map<String, TextField> txtFldMap, String[] txtFldArr) {
+		// TODO Auto-generated method stub
+		for(String txtFldId : txtFldArr) {
+			TextField txtFld = txtFldMap.get(txtFldId);
+			if(txtFld.getText().isEmpty()) {
+				txtFld.requestFocus();
+				return true;
+			}
+		}
+		return false;
+	}
 
 	@Override
 	public boolean isEmpty(Map<String, TextField> txtFldMap, String[] txtFldArr, String[] list) {
