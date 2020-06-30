@@ -63,9 +63,10 @@ public class LoginServiceImpl implements LoginService{
 	public Parent OrderStart() { // 로그인 이후 주문메뉴 창을 열어줌
 		// TODO Auto-generated method stub
 		CommonService comSrv = new CommonServiceImpl();
+	    MenuService mSrv = new MenuServiceImpl();
 		Stage menu = new Stage();
 		Parent form = comSrv.showWindow(menu, "../view/Menu.fxml");
-		
+		mSrv.AddChoiceBox(form); //초이스 박스 수량 선택
 		return form;
 	} 
 
