@@ -28,6 +28,7 @@ public class PayController extends Controller implements Initializable {
 	CommonServiceImpl comSrv;
 	DatabaseService dataSrv;
 	PayServiceImpl paySrv;
+	MenuController menuCon;
 	
 	
 	@Override
