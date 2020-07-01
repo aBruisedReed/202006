@@ -7,4 +7,5 @@ public interface DatabaseService {
 	public boolean isOverrap(String id); // ID 중복 체크
 	public boolean Select(String id, String pw); // Member 정보 가져오기
 	public Goods selectGoods(String name);
+	public String SelectAddress(String id);
 }

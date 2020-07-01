@@ -45,6 +45,7 @@ public class PayController extends Controller implements Initializable {
 		Label total = (Label) root.lookup("#totalPrice");
 		total.setText(sd.getTotalPrice());
 		Label address = (Label)root.lookup("#address"); // address setText 필요
+		address.setText(dataSrv.SelectAddress(sd.getCurrentUserId()));
 		
 		flag=false;
 	}
