@@ -9,12 +9,15 @@ import javafx.scene.Parent;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import service.CommonServiceImpl;
+import service.DatabaseService;
+import service.DatabaseServiceImpl;
 import service.SingletonData;
 
 public class PayController extends Controller implements Initializable {
 	Parent root;
 	boolean flag;
 	CommonServiceImpl comSrv;
+	DatabaseService dataSrv;
 	
 	
 	@Override
@@ -28,6 +31,7 @@ public class PayController extends Controller implements Initializable {
 		// TODO Auto-generated method stub
 		flag=true;
 		comSrv = new CommonServiceImpl();
+		dataSrv = new DatabaseServiceImpl();
 	}
 	
 	

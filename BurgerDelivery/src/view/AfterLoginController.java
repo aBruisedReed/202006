@@ -39,6 +39,8 @@ public class AfterLoginController extends Controller implements Initializable {
 	
 	public void orderCheck() {
 		Stage orderCheck = new Stage();
-		comSrv.showWindow(orderCheck, "../view/CheckOrder.fxml");
+		comSrv.showWindow(orderCheck, "../view/ShowOrder.fxml");
 	}
+	
+	
 }
