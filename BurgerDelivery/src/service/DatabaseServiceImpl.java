@@ -35,11 +35,11 @@ public class DatabaseServiceImpl implements DatabaseService{
 			con = DBConnection.getConnection();
 			String sql = "insert into member values(?,?,?,?,?)";
 			ps = con.prepareStatement(sql);
-			ps.setString(1,member.getId());
-			ps.setString(2,member.getPw());
-			ps.setString(3, member.getName());
-			ps.setString(4, member.getAddress());
-			ps.setString(5, member.getPhone());
+			ps.setString(1,member.getName());
+			ps.setString(2,member.getId());
+			ps.setString(3, member.getPw());
+			ps.setString(4, member.getPhone());
+			ps.setString(5, member.getAddress());
 			ps.executeUpdate();
 		}catch(Exception e) {
 			e.printStackTrace();
@@ -90,6 +90,25 @@ public class DatabaseServiceImpl implements DatabaseService{
 		}
 		return true;
 	}
+//	
+//	public String SelectAddress(String id) {
+//		try {
+//			con = DBConnection.getConnection();
+//			String sql = "select * from member where id=?";
+//			ps = con.prepareStatement(sql);
+//			ps.setString(1, id);
+//			rs = ps.executeQuery();
+//			
+//			if(rs.next()==false) {
+//				return false;
+//			}
+//			rs.close();
+//			ps.close();
+//		} catch(Exception e) {
+//			e.printStackTrace();
+//		}
+//		return ps.toString(4);
+//	}
 	
 	@Override
 	public Goods selectGoods(String name) {

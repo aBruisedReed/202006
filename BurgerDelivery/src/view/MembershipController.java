@@ -89,8 +89,8 @@ public class MembershipController extends Controller implements Initializable {
 		member.setName(txtFldMap.get(txtFldArr[0]).getText());
 		member.setId(txtFldMap.get(txtFldArr[1]).getText());
 		member.setPw(txtFldMap.get(txtFldArr[2]).getText());
-		member.setAddress(txtFldMap.get(txtFldArr[5]).getText());
 		member.setPhone(txtFldMap.get(txtFldArr[4]).getText());
+		member.setAddress(txtFldMap.get(txtFldArr[5]).getText());
 		
 		System.out.println("이름 : "+" "+member.getName());
 		System.out.println("ID : "+" "+member.getId());
