@@ -99,7 +99,7 @@ public class MembershipController extends Controller implements Initializable {
 		System.out.println("전화번호 : "+" "+member.getPhone());
 		System.out.println("주소 : "+" "+member.getAddress());
 		
-		//db.Insert(member);
+		db.Insert(member);
 		comSrv.ErrorMsg("가입","가입 성공!","가입이 완료 되었습니다.");
 		Stage s = (Stage) root.getScene().getWindow();
 		s.close();

@@ -48,20 +48,20 @@ public class LoginController extends Controller implements Initializable {
 		else {
 			TextField idTxt = (TextField)root.lookup("#LoginID1");
 			TextField pwTxt = (TextField)root.lookup("#PassID1");
-//			
-//			DatabaseService db = new DatabaseServiceImpl();
-//			boolean login = db.Select(idTxt.getText(), pwTxt.getText());
-//			CommonService com = new CommonServiceImpl();
-//			if(login) {
-//				com.ErrorMsg("로그인 되었습니다.");
 			
+			DatabaseService db = new DatabaseServiceImpl();
+			boolean login = db.Select(idTxt.getText(), pwTxt.getText());
+			CommonService com = new CommonServiceImpl();
+			if(login) {
+//				com.ErrorMsg("로그인 되었습니다.");
+				comSrv.WindowClose(event);
 				SingletonData sd = SingletonData.getInstance(); //현재 로그인한 회원 정보 기록용
 				sd.setCurrentUserId(idTxt.getText());
 				
 				loginSrv.AfterLogin();
-//			} else {
-//				com.ErrorMsg("아이디 패스워드가 틀립니다.");
-//			}
+			} else {
+				com.ErrorMsg("아이디 패스워드가 틀립니다.");
+			}
 		}
 	}
 	
