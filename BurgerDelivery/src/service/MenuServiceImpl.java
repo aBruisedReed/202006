@@ -8,7 +8,7 @@ public class MenuServiceImpl implements MenuService {
 	@Override
 	public void AddChoiceBox(Parent form) {
 		// TODO Auto-generated method stub
-		String[] item1 = {"1개","2개","3개","4개","5개"}; 
+		String[] item1 = {"0개","1개","2개","3개","4개","5개"}; 
 		 
 		//세트 , 버거 , 음료 , 사이드  <--초이스 박스
 		ChoiceBox<String> chSet1 = (ChoiceBox<String>) form.lookup("#chSet1");

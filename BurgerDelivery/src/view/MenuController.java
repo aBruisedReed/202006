@@ -75,100 +75,258 @@ public class MenuController extends Controller implements Initializable {
 		ChoiceBox<String> side7 = (ChoiceBox<String>)root.lookup("#chSide7");
 		ChoiceBox<String> side8 = (ChoiceBox<String>)root.lookup("#chSide8");
 		ChoiceBox<String> side9 = (ChoiceBox<String>)root.lookup("#chSide9");
-
-
+		
+        String clear = "0개";
+        
 		if(set1.getValue() != null) {
+		if (set1.getValue().equals(clear)) {
+			
+		
+		}else {
 			goods.add("맥딜리버리 치킨 스낵팩,11000,"+set1.getValue().substring(0, 1));
 		}
+		}
 		if(set2.getValue() != null) {
+			if (set2.getValue().equals(clear)) {
+				
+			
+			}else {
 			goods.add("트리플 치즈버거 세트,7900,"+set2.getValue().substring(0, 1));
 		}
+		}
 		if(set3.getValue() != null) {
+			if (set3.getValue().equals(clear)) {
+			
+			
+			}else {
 			goods.add("맥딜리버리 상하이 버거 싱글팩,11000,"+set3.getValue().substring(0, 1));
 		}
+			}
 		if(set4.getValue() != null) {
+			if (set4.getValue().equals(clear)) {
+				
+			
+			}else {
+		
 			goods.add("맥치킨ⓡ 모짜렐라,6900,"+set4.getValue().substring(0, 1));
+			}
 		}
 		if(set5.getValue() != null) {
+			if (set5.getValue().equals(clear)) {
+				
+			
+			}else {
+		
 			goods.add("1955 버거™,8000,"+set5.getValue().substring(0, 1));
+			}
 		}
 		if(set6.getValue() != null) {
-			goods.add("맥딜리버리 빅맥ⓡ 싱글팩,11000,"+set6.getValue().substring(0, 1));
+			if (set6.getValue().equals(clear)) {
+				
+			
+			}else {
+		
+			goods.add("맥딜리버리 빅맥ⓡ 싱글팩,11000,"+set6.getValue().substring(0, 1)); }
 		}
 		if(bug1.getValue() != null) {
-			goods.add("트리플 치즈버거,6300,"+bug1.getValue().substring(0, 1));
+			if (bug1.getValue().equals(clear)) {
+				
+			
+			}else {
+		
+			goods.add("트리플 치즈버거,6300,"+bug1.getValue().substring(0, 1)); }
 		}
 		if(bug2.getValue() != null) {
-			goods.add("맥치킨 모짜렐라,5400,"+bug2.getValue().substring(0, 1));
+			if (bug2.getValue().equals(clear)) {
+			
+			
+			}else {
+		
+			goods.add("맥치킨 모짜렐라,5400,"+bug2.getValue().substring(0, 1)); }
 		}
 		if(bug3.getValue() != null) {
-			goods.add("맥스파이시 상하이버거,5200,"+bug3.getValue().substring(0, 1));
+			if (bug3.getValue().equals(clear)) {
+				
+			
+			}else {
+		
+			goods.add("맥스파이시 상하이버거,5200,"+bug3.getValue().substring(0, 1)); }
 		}
 		if(bug4.getValue() != null) {
-			goods.add("베이컨 토마토 디럭스,6000,"+bug4.getValue().substring(0, 1));
+			if (bug4.getValue().equals(clear)) {
+				
+			
+			}else {
+		
+			goods.add("베이컨 토마토 디럭스,6000,"+bug4.getValue().substring(0, 1)); }
 		}
 		if(bug5.getValue() != null) {
-			goods.add("빅맥,5200,"+bug5.getValue().substring(0, 1));
+			if (bug5.getValue().equals(clear)) {
+				
+			
+			}else {
+		
+			goods.add("빅맥,5200,"+bug5.getValue().substring(0, 1)); }
 		}
 		if(bug6.getValue() != null) {
-			goods.add("슈슈버거,5000,"+bug6.getValue().substring(0, 1));
+			if (bug6.getValue().equals(clear)) {
+			
+			
+			}else {
+		
+			goods.add("슈슈버거,5000,"+bug6.getValue().substring(0, 1)); }
 		}
 		if(bug7.getValue() != null) {
-			goods.add("불고기버거,2700,"+bug7.getValue().substring(0, 1));
+			if (bug7.getValue().equals(clear)) {
+				
+			
+			}else {
+		
+			goods.add("불고기버거,2700,"+bug7.getValue().substring(0, 1)); }
 		}
 		if(bug8.getValue() != null) {
-			goods.add("맥 치킨,4000,"+bug8.getValue().substring(0, 1));
+			if (bug8.getValue().equals(clear)) {
+				
+			
+			}else {
+		
+			goods.add("맥 치킨,4000,"+bug8.getValue().substring(0, 1)); }
 		}
 		if(dr1.getValue() != null) {
-			goods.add("딸기 칠러,3200,"+dr1.getValue().substring(0, 1));
+			if (dr1.getValue().equals(clear)) {
+				
+			
+			}else {
+		
+			goods.add("딸기 칠러,3200,"+dr1.getValue().substring(0, 1)); }
 		}
 		if(dr2.getValue() != null) {
-			goods.add("배 칠러,3200,"+dr2.getValue().substring(0, 1));
+			if (dr2.getValue().equals(clear)) {
+				
+			
+			}else {
+		
+			goods.add("배 칠러,3200,"+dr2.getValue().substring(0, 1)); }
 		}
 		if(dr3.getValue() != null) {
-			goods.add("자두 칠러,3200,"+dr3.getValue().substring(0, 1));
+			if (dr3.getValue().equals(clear)) {
+			
+			
+			}else {
+		
+			goods.add("자두 칠러,3200,"+dr3.getValue().substring(0, 1)); }
 		}
 		if(dr4.getValue() != null) {
-			goods.add("바닐라 쉐이크,3200,"+dr4.getValue().substring(0, 1));
+			if (dr4.getValue().equals(clear)) {
+				
+			
+			}else {
+		
+			goods.add("바닐라 쉐이크,3200,"+dr4.getValue().substring(0, 1)); }
 		}
 		if(dr5.getValue() != null) {
-			goods.add("아메리카노,2700,"+dr5.getValue().substring(0, 1));
+			if (dr5.getValue().equals(clear)) {
+				
+			
+			}else {
+		
+			goods.add("아메리카노,2700,"+dr5.getValue().substring(0, 1)); }
 		}
 		if(dr6.getValue() != null) {
-			goods.add("카페 라떼,3200,"+dr6.getValue().substring(0, 1));
+			if (dr6.getValue().equals(clear)) {
+				
+			
+			}else {
+		
+			goods.add("카페 라떼,3200,"+dr6.getValue().substring(0, 1)); }
 		}
 		if(dr7.getValue() != null) {
-			goods.add("코카콜라,2000,"+dr7.getValue().substring(0, 1));
+			if (dr7.getValue().equals(clear)) {
+				
+			
+			}else {
+		
+			goods.add("코카콜라,2000,"+dr7.getValue().substring(0, 1)); }
 		}
 		if(dr8.getValue() != null) {
-			goods.add("스프라이트,5400,"+dr8.getValue().substring(0, 1));
+			if (dr8.getValue().equals(clear)) {
+				
+			
+			}else {
+		
+			goods.add("스프라이트,5400,"+dr8.getValue().substring(0, 1)); }
 		}
 		if(side1.getValue() != null) {
-			goods.add("맥윙™ 2조각,3400,"+side1.getValue().substring(0, 1));
+			if (side1.getValue().equals(clear)) {
+				
+			
+			}else {
+		
+			goods.add("맥윙™ 2조각,3400,"+side1.getValue().substring(0, 1)); }
 		}
 		if(side2.getValue() != null) {
-			goods.add("스트링치즈,2300,"+side2.getValue().substring(0, 1));
+			if (side2.getValue().equals(clear)) {
+			
+			
+			}else {
+		
+			goods.add("스트링치즈,2300,"+side2.getValue().substring(0, 1)); }
 		}
 		if(side3.getValue() != null) {
-			goods.add("골든 모짜렐라 치즈스틱 4조각,4600,"+side3.getValue().substring(0, 1));
+			if (side3.getValue().equals(clear)) {
+				
+			
+			}else {
+		
+			goods.add("골든 모짜렐라 치즈스틱 4조각,4600,"+side3.getValue().substring(0, 1)); }
 		}
 		if(side4.getValue() != null) {
-			goods.add("상하이 치킨 스낵랩,2700,"+side4.getValue().substring(0, 1));
+			if (side4.getValue().equals(clear)) {
+				
+			
+			}else {
+		
+			goods.add("상하이 치킨 스낵랩,2700,"+side4.getValue().substring(0, 1)); }
 		}
 		if(side5.getValue() != null) {
-			goods.add("후렌치 후라이,2300,"+side5.getValue().substring(0, 1));
+			if (side5.getValue().equals(clear)) {
+				
+			
+			}else {
+		
+			goods.add("후렌치 후라이,2300,"+side5.getValue().substring(0, 1)); }
 		}
 		if(side6.getValue() != null) {
-			goods.add("애플파이,1700,"+side6.getValue().substring(0, 1));
+			if (side6.getValue().equals(clear)) {
+				
+			
+			}else {
+		
+			goods.add("애플파이,1700,"+side6.getValue().substring(0, 1)); }
 		}
 		if(side7.getValue() != null) {
-			goods.add("오레오 맥플러리,3200,"+side7.getValue().substring(0, 1));
+			if (side7.getValue().equals(clear)) {
+				
+			
+			}else {
+		
+			goods.add("오레오 맥플러리,3200,"+side7.getValue().substring(0, 1)); }
 		}
 		if(side8.getValue() != null) {
-			goods.add("카라멜 선데이 아이스크림,2200,"+side8.getValue().substring(0, 1));
+			if (side8.getValue().equals(clear)) {
+				
+			
+			}else {
+		
+			goods.add("카라멜 선데이 아이스크림,2200,"+side8.getValue().substring(0, 1)); }
 		}
 		if(side9.getValue() != null) {
-			goods.add("바닐라 선데이 아이스크림,2200,"+side9.getValue().substring(0, 1));
+			if (side9.getValue().equals(clear)) {
+				
+			
+			}else {
+		
+			goods.add("바닐라 선데이 아이스크림,2200,"+side9.getValue().substring(0, 1)); }
 		}
 		
 		if(goods.isEmpty()) { //선택 안되면 오더리스트가 아예 안뜨게해서 OrderEmpty가 굳이 필요 없을 듯
