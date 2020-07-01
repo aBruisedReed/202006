@@ -5,8 +5,8 @@ create table member (
 	name varchar(20),
 	id varchar(20),
 	pw varchar(20),
-	address varchar(200),
 	phone varchar(20)
+	address varchar(200),
 )
  */
 public class Member {

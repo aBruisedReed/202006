@@ -39,7 +39,10 @@
             <Insets />
          </GridPane.margin>
       </Label>
-      <Label fx:id="address" prefHeight="61.0" prefWidth="221.0" GridPane.rowIndex="1" />
+      <Label fx:id="address" prefHeight="59.0" prefWidth="264.0" textOverrun="CLIP" wrapText="true" GridPane.rowIndex="1">
+         <font>
+            <Font size="11.0" />
+         </font></Label>
       <Label text="결제수단" GridPane.rowIndex="2">
          <font>
             <Font name="System Bold" size="14.0" />
