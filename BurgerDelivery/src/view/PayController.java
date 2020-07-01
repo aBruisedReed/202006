@@ -1,16 +1,25 @@
 package view;
 
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.Map;
 import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.control.CheckBox;
+import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import javafx.stage.Stage;
+import service.CommonService;
 import service.CommonServiceImpl;
 import service.DatabaseService;
 import service.DatabaseServiceImpl;
+import service.PayService;
+import service.PayServiceImpl;
 import service.SingletonData;
 
 public class PayController extends Controller implements Initializable {
@@ -18,6 +27,7 @@ public class PayController extends Controller implements Initializable {
 	boolean flag;
 	CommonServiceImpl comSrv;
 	DatabaseService dataSrv;
+	PayServiceImpl paySrv;
 	
 	
 	@Override
@@ -44,12 +54,29 @@ public class PayController extends Controller implements Initializable {
 		SingletonData sd = SingletonData.getInstance();
 		Label total = (Label) root.lookup("#totalPrice");
 		total.setText(sd.getTotalPrice());
-		Label address = (Label)root.lookup("#address"); // address setText 필요
 		
 		flag=false;
 	}
 	
-	public void onPayProc() { //결제 버튼
+	public void onPayProc(ActionEvent event) { //결제 버튼
+		PayService paySrv = new PayServiceImpl();
+		ChoiceBox<String> payselect = (ChoiceBox<String>)root.lookup("#payselect");
+		if(payselect == null) {
+			comSrv.ErrorMsg("결제 방식을 선택해 주세요");
+			return;
+		} else if (payselect.getValue() == null) {
+			comSrv.ErrorMsg("결제 방식을 선택해 주세요");
+			return;
+		}else if (payselect.getValue() == "현금") {
+			comSrv.ErrorMsg("현금으로 결제 하였습니다");
+			comSrv.WindowClose(event);
+			return;
+		}else if (payselect.getValue() == "신용카드") {
+			comSrv.ErrorMsg("신용카드로 결제 하였습니다");
+			comSrv.WindowClose(event);
+			return;
+		}
+		return;
 		
 	}
 	
@@ -66,4 +93,5 @@ public class PayController extends Controller implements Initializable {
 		CheckBox cb1 = (CheckBox)root.lookup("#ch1");
 		cb1.setSelected(false);
 	}
+	
 }

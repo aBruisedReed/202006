@@ -15,6 +15,8 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import service.CommonServiceImpl;
 import service.Goods;
+import service.PayService;
+import service.PayServiceImpl;
 import service.SingletonData;
 
 public class OrderListController extends Controller implements Initializable {
@@ -75,8 +77,11 @@ public class OrderListController extends Controller implements Initializable {
 	}
 	
 	public void payBtnProc(ActionEvent event) {
+		PayService pSvr = new PayServiceImpl();
 		comSrv.WindowClose(event);
 		Stage pay = new Stage();
-		comSrv.showWindow(pay, "../view/Pay.fxml"); //가격 전달해야함
+		Parent form = comSrv.showWindow(pay, "../view/Pay.fxml"); //가격 전달해야함
+		pSvr.PayChoiceBox(form);
+		return;
 	}
 }
