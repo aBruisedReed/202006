@@ -5,7 +5,7 @@ create table member (
 	name varchar(20),
 	id varchar(20),
 	pw varchar(20),
-	phone varchar(20)
+	phone varchar(200);
 	address varchar(200),
 )
  */

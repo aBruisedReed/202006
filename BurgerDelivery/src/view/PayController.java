@@ -61,21 +61,31 @@ public class PayController extends Controller implements Initializable {
 		flag=false;
 	}
 	
+	public void closeMenuWindow() {
+		SingletonData sd = SingletonData.getInstance();
+		Parent root = sd.getWindow(); 
+		Stage stage = (Stage)root.getScene().getWindow();
+		stage.close();
+	}
+	
 	public void onPayProc(ActionEvent event) { //결제 버튼
 		PayService paySrv = new PayServiceImpl();
 		ChoiceBox<String> payselect = (ChoiceBox<String>)root.lookup("#payselect");
+		
 		if(payselect == null) {
-			comSrv.ErrorMsg("결제 방식을 선택해 주세요");
+			comSrv.ErrorMsg("결제 방식을 선택해 주세요", "결제 방식을 선택해 주세요", "결제 방식을 선택해 주세요");
 			return;
 		} else if (payselect.getValue() == null) {
-			comSrv.ErrorMsg("결제 방식을 선택해 주세요");
+			comSrv.ErrorMsg("결제 방식을 선택해 주세요", "결제 방식을 선택해 주세요", "결제 방식을 선택해 주세요");
 			return;
 		}else if (payselect.getValue() == "현금") {
-			comSrv.ErrorMsg("결제 완료", "현금으로 결제 하였습니다.");
+			comSrv.ErrorMsg("결제 완료", "결제 완료", "현금으로 결제 하였습니다.");
+			closeMenuWindow(); //결제 완료시 메뉴 닫기
 			comSrv.WindowClose(event);
 			return;
 		}else if (payselect.getValue() == "신용카드") {
-			comSrv.ErrorMsg("결제 완료", "신용카드로 결제 하였습니다.");
+			comSrv.ErrorMsg("결제 완료", "결제 완료", "신용카드로 결제 하였습니다.");
+			closeMenuWindow();
 			comSrv.WindowClose(event);
 			return;
 		}

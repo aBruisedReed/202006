@@ -18,6 +18,7 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import service.CommonService;
 import service.CommonServiceImpl;
+import service.SingletonData;
 
 public class MenuController extends Controller implements Initializable {
 	Parent root;
@@ -42,6 +43,8 @@ public class MenuController extends Controller implements Initializable {
 	}
 	
 	public void selectProc() {
+		SingletonData sd = SingletonData.getInstance();
+		sd.setWindow(root);
 		goods.clear(); //비우기
 		
 		ChoiceBox<String> set1 = (ChoiceBox<String>)root.lookup("#chSet1");
