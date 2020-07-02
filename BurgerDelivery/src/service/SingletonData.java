@@ -1,10 +1,13 @@
 package service;
 
+import javafx.scene.Parent;
+
 public class SingletonData {
 	private static SingletonData instance = new SingletonData();
 	
 	String currentUserId;
 	String totalPrice;
+	Parent window;
 
 	private SingletonData() {}
 	
@@ -22,5 +25,11 @@ public class SingletonData {
 	}
 	public void setTotalPrice(String totalPrice) {
 		this.totalPrice = totalPrice;
+	}
+	public Parent getWindow() {
+		return window;
+	}
+	public void setWindow(Parent window) {
+		this.window = window;
 	}
 }
