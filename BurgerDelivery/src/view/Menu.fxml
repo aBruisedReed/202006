@@ -1,17 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.text.*?>
-<?import javafx.scene.web.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import java.lang.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<ScrollPane prefHeight="800.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.MenuController">
+<ScrollPane prefHeight="818.0" prefWidth="614.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.MenuController">
    <content>
-      <BorderPane fx:id="MenuBorder" maxHeight="1200.0" prefHeight="800.0" prefWidth="600.0" stylesheets="@MainTheme.css">
+      <BorderPane fx:id="MenuBorder" maxHeight="1200.0" prefHeight="814.0" prefWidth="612.0" stylesheets="@MainTheme.css">
          <center>
             <TabPane prefHeight="180.0" prefWidth="180.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
               <tabs>
@@ -48,16 +57,39 @@
                                           <Insets left="70.0" top="10.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <Label text="898~1,047 Kcal">
+                                    <Label text="1,047 Kcal">
                                        <VBox.margin>
-                                          <Insets left="50.0" top="10.0" />
+                                          <Insets left="65.0" top="10.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <ChoiceBox fx:id="chSet5" prefWidth="100.0" style="-fx-background-color: white; -fx-border-color: #5D5D5D;">
-                                       <VBox.margin>
-                                          <Insets bottom="10.0" left="45.0" right="10.0" top="10.0" />
-                                       </VBox.margin>
-                                    </ChoiceBox>
+                                    <StackPane prefHeight="150.0" prefWidth="200.0">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                             <children>
+                                                <Button mnemonicParsing="false" onAction="#setMinus5" text="－">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Button>
+                                                <Label fx:id="setNum5" alignment="CENTER" prefHeight="29.0" prefWidth="36.0" text="0" textAlignment="CENTER">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <Button mnemonicParsing="false" onAction="#setPlus5" prefWidth="35.0" text="＋">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                          <Button fx:id="setSelBtn5" mnemonicParsing="false" onAction="#setSel5" prefHeight="27.0" prefWidth="105.0" text="선택하기">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
                                  </children>
                               </VBox>
                               <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
@@ -85,16 +117,39 @@
                                           <Insets left="60.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <Label text="1,204~1,501 Kcal">
+                                    <Label text="1,501 Kcal">
                                        <VBox.margin>
-                                          <Insets left="30.0" top="5.0" />
+                                          <Insets left="65.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <ChoiceBox fx:id="chSet6" prefWidth="100.0" style="-fx-background-color: white; -fx-border-color: #5D5D5D;">
-                                       <VBox.margin>
-                                          <Insets bottom="10.0" left="45.0" right="10.0" top="5.0" />
-                                       </VBox.margin>
-                                    </ChoiceBox>
+                                    <StackPane prefHeight="150.0" prefWidth="200.0">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                             <children>
+                                                <Button mnemonicParsing="false" onAction="#setMinus6" text="－">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Button>
+                                                <Label fx:id="setNum6" alignment="CENTER" prefHeight="29.0" prefWidth="36.0" text="0" textAlignment="CENTER">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <Button mnemonicParsing="false" onAction="#setPlus6" prefWidth="35.0" text="＋">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                          <Button fx:id="setSelBtn6" mnemonicParsing="false" onAction="#setSel6" prefHeight="27.0" prefWidth="105.0" text="선택하기">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
                                  </children>
                               </VBox>
                               <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2">
@@ -122,16 +177,39 @@
                                           <Insets left="60.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <Label text="1,304~1,452 Kcal">
+                                    <Label text="1,452 Kcal">
                                        <VBox.margin>
-                                          <Insets left="40.0" top="5.0" />
+                                          <Insets left="65.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <ChoiceBox fx:id="chSet3" prefWidth="100.0" style="-fx-background-color: white; -fx-border-color: #5D5D5D;" styleClass="combo-box" stylesheets="@MainTheme.css">
-                                       <VBox.margin>
-                                          <Insets bottom="10.0" left="45.0" right="10.0" top="5.0" />
-                                       </VBox.margin>
-                                    </ChoiceBox>
+                                    <StackPane prefHeight="150.0" prefWidth="204.0">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                             <children>
+                                                <Button mnemonicParsing="false" onAction="#setMinus3" text="－">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Button>
+                                                <Label fx:id="setNum3" alignment="CENTER" prefHeight="29.0" prefWidth="36.0" text="0" textAlignment="CENTER">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <Button mnemonicParsing="false" onAction="#setPlus3" prefWidth="35.0" text="＋">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                          <Button fx:id="setSelBtn3" mnemonicParsing="false" onAction="#setSel3" prefHeight="27.0" prefWidth="105.0" text="선택하기">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
                                  </children>
                               </VBox>
                               <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
@@ -154,80 +232,149 @@
                                           <Insets left="60.0" top="10.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <Label text="1,038~1,1187 Kcal">
+                                    <Label text="1,187 Kcal">
                                        <VBox.margin>
-                                          <Insets left="30.0" top="10.0" />
+                                          <Insets left="60.0" top="10.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <ChoiceBox fx:id="chSet4" prefWidth="100.0" style="-fx-background-color: white; -fx-border-color: #5D5D5D;">
-                                       <VBox.margin>
-                                          <Insets bottom="10.0" left="45.0" right="10.0" top="10.0" />
-                                       </VBox.margin>
-                                    </ChoiceBox>
+                                    <StackPane prefHeight="150.0" prefWidth="200.0">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                             <children>
+                                                <Button mnemonicParsing="false" onAction="#setMinus4" text="－">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Button>
+                                                <Label fx:id="setNum4" alignment="CENTER" prefHeight="29.0" prefWidth="36.0" text="0" textAlignment="CENTER">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <Button mnemonicParsing="false" onAction="#setPlus4" prefWidth="35.0" text="＋">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                          <Button fx:id="setSelBtn4" mnemonicParsing="false" onAction="#setSel4" prefHeight="27.0" prefWidth="105.0" text="선택하기">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
                                  </children>
                               </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0">
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
                                  <children>
                                     <ImageView fitHeight="120.0" fitWidth="170.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@../../resource/set/ChickenSnackPack.png" />
                                        </image>
                                        <VBox.margin>
-                                          <Insets left="15.0" top="40.0" />
+                                          <Insets top="45.0" />
                                        </VBox.margin>
                                     </ImageView>
                                     <Label text="맥딜리버리 치킨 스낵팩">
                                        <VBox.margin>
-                                          <Insets left="20.0" right="10.0" top="10.0" />
+                                          <Insets top="10.0" />
                                        </VBox.margin>
                                     </Label>
                                     <Label text="￦11,000">
                                        <VBox.margin>
-                                          <Insets left="60.0" top="10.0" />
+                                          <Insets top="10.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <Label text="1,204~1,501 Kcal">
+                                    <Label text="1,501 Kcal">
                                        <VBox.margin>
-                                          <Insets left="35.0" top="10.0" />
+                                          <Insets top="10.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <ChoiceBox fx:id="chSet1" prefWidth="100.0" style="-fx-background-color: white; -fx-border-color: #5D5D5D;" stylesheets="@MainTheme.css">
-                                       <VBox.margin>
-                                          <Insets bottom="10.0" left="45.0" right="10.0" top="10.0" />
-                                       </VBox.margin>
-                                    </ChoiceBox>
+                                    <StackPane prefHeight="150.0" prefWidth="200.0">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                             <children>
+                                                <Button mnemonicParsing="false" onAction="#setMinus1" text="－">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Button>
+                                                <Label fx:id="setNum1" alignment="CENTER" prefHeight="29.0" prefWidth="36.0" text="0" textAlignment="CENTER">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <Button mnemonicParsing="false" onAction="#setPlus1" prefWidth="35.0" text="＋">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                          <Button fx:id="setSelBtn1" mnemonicParsing="false" onAction="#setSel1" prefHeight="27.0" prefWidth="105.0" text="선택하기">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
                                  </children>
                               </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
                                  <children>
                                     <ImageView fitHeight="120.0" fitWidth="170.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@../../resource/set/TripleCheeseSet.png" />
                                        </image>
                                        <VBox.margin>
-                                          <Insets left="15.0" top="40.0" />
+                                          <Insets top="40.0" />
                                        </VBox.margin>
                                     </ImageView>
                                     <Label text="트리플 치즈버거">
                                        <VBox.margin>
-                                          <Insets left="40.0" right="10.0" top="10.0" />
+                                          <Insets top="10.0" />
                                        </VBox.margin>
                                     </Label>
                                     <Label text="￦7,900">
                                        <VBox.margin>
-                                          <Insets left="70.0" top="10.0" />
+                                          <Insets top="10.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <Label text="987~1,136 Kcal">
+                                    <Label text="1,136 Kcal">
                                        <VBox.margin>
-                                          <Insets left="45.0" top="10.0" />
+                                          <Insets top="10.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <ChoiceBox fx:id="chSet2" prefWidth="100.0" style="-fx-background-color: white; -fx-border-color: #5D5D5D;">
-                                       <VBox.margin>
-                                          <Insets bottom="10.0" left="45.0" right="10.0" top="10.0" />
-                                       </VBox.margin>
-                                    </ChoiceBox>
+                                    <StackPane prefHeight="150.0" prefWidth="200.0">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                             <children>
+                                                <Button mnemonicParsing="false" onAction="#setMinus2" text="－">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Button>
+                                                <Label fx:id="setNum2" alignment="CENTER" prefHeight="29.0" prefWidth="36.0" text="0" textAlignment="CENTER">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <Button mnemonicParsing="false" onAction="#setPlus2" prefWidth="35.0" text="＋">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                          <Button fx:id="setSelBtn2" mnemonicParsing="false" onAction="#setSel2" prefHeight="27.0" prefWidth="105.0" text="선택하기">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
                                  </children>
                               </VBox>
                            </children>
@@ -274,11 +421,34 @@
                                           <Insets left="70.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <ChoiceBox fx:id="chBuger8" prefWidth="100.0">
-                                       <VBox.margin>
-                                          <Insets bottom="10.0" left="45.0" right="10.0" top="5.0" />
-                                       </VBox.margin>
-                                    </ChoiceBox>
+                                    <StackPane prefHeight="150.0" prefWidth="200.0">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                             <children>
+                                                <Button mnemonicParsing="false" onAction="#sinMinus8" text="－">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Button>
+                                                <Label fx:id="sinNum8" alignment="CENTER" prefHeight="29.0" prefWidth="36.0" text="0" textAlignment="CENTER">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <Button mnemonicParsing="false" onAction="#sinPlus8" prefWidth="35.0" text="＋">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                          <Button fx:id="sinSelBtn8" mnemonicParsing="false" onAction="#sinSel8" prefHeight="27.0" prefWidth="105.0" text="선택하기">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
                                  </children>
                               </VBox>
                               <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2">
@@ -306,11 +476,34 @@
                                           <Insets left="70.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <ChoiceBox fx:id="chBuger3" prefWidth="100.0">
-                                       <VBox.margin>
-                                          <Insets bottom="10.0" left="45.0" right="10.0" top="5.0" />
-                                       </VBox.margin>
-                                    </ChoiceBox>
+                                    <StackPane prefHeight="150.0" prefWidth="200.0">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                             <children>
+                                                <Button mnemonicParsing="false" onAction="#sinMinus3" text="－">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Button>
+                                                <Label fx:id="sinNum3" alignment="CENTER" prefHeight="29.0" prefWidth="36.0" text="0" textAlignment="CENTER">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <Button mnemonicParsing="false" onAction="#sinPlus3" prefWidth="35.0" text="＋">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                          <Button fx:id="sinSelBtn3" mnemonicParsing="false" onAction="#sinSel3" prefHeight="27.0" prefWidth="105.0" text="선택하기">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
                                  </children>
                               </VBox>
                               <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
@@ -338,11 +531,34 @@
                                           <Insets left="70.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <ChoiceBox fx:id="chBuger4" prefWidth="100.0">
-                                       <VBox.margin>
-                                          <Insets bottom="10.0" left="45.0" right="10.0" top="5.0" />
-                                       </VBox.margin>
-                                    </ChoiceBox>
+                                    <StackPane prefHeight="150.0" prefWidth="200.0">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                             <children>
+                                                <Button mnemonicParsing="false" onAction="#sinMinus4" text="－">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Button>
+                                                <Label fx:id="sinNum4" alignment="CENTER" prefHeight="29.0" prefWidth="36.0" text="0" textAlignment="CENTER">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <Button mnemonicParsing="false" onAction="#sinPlus4" prefWidth="35.0" text="＋">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                          <Button fx:id="sinSelBtn4" mnemonicParsing="false" onAction="#sinSel4" prefHeight="27.0" prefWidth="105.0" text="선택하기">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
                                  </children>
                               </VBox>
                               <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="2" GridPane.rowSpan="2">
@@ -370,11 +586,34 @@
                                           <Insets left="70.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <ChoiceBox fx:id="chBuger7" prefWidth="100.0">
-                                       <VBox.margin>
-                                          <Insets bottom="10.0" left="45.0" right="10.0" top="5.0" />
-                                       </VBox.margin>
-                                    </ChoiceBox>
+                                    <StackPane prefHeight="150.0" prefWidth="200.0">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                             <children>
+                                                <Button mnemonicParsing="false" onAction="#sinMinus7" text="－">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Button>
+                                                <Label fx:id="sinNum7" alignment="CENTER" prefHeight="29.0" prefWidth="36.0" text="0" textAlignment="CENTER">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <Button mnemonicParsing="false" onAction="#sinPlus7" prefWidth="35.0" text="＋">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                          <Button fx:id="sinSelBtn7" mnemonicParsing="false" onAction="#sinSel7" prefHeight="27.0" prefWidth="105.0" text="선택하기">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
                                  </children>
                               </VBox>
                               <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
@@ -402,11 +641,34 @@
                                           <Insets left="70.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <ChoiceBox fx:id="chBuger6" prefWidth="100.0">
-                                       <VBox.margin>
-                                          <Insets bottom="10.0" left="45.0" right="10.0" top="5.0" />
-                                       </VBox.margin>
-                                    </ChoiceBox>
+                                    <StackPane prefHeight="150.0" prefWidth="200.0">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                             <children>
+                                                <Button mnemonicParsing="false" onAction="#sinMinus6" text="－">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Button>
+                                                <Label fx:id="sinNum6" alignment="CENTER" prefHeight="29.0" prefWidth="36.0" text="0" textAlignment="CENTER">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <Button mnemonicParsing="false" onAction="#sinPlus6" prefWidth="35.0" text="＋">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                          <Button fx:id="sinSelBtn6" mnemonicParsing="false" onAction="#sinSel6" prefHeight="27.0" prefWidth="105.0" text="선택하기">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
                                  </children>
                               </VBox>
                               <VBox prefHeight="200.0" prefWidth="100.0">
@@ -434,11 +696,34 @@
                                           <Insets left="70.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <ChoiceBox fx:id="chBuger1" prefWidth="100.0">
-                                       <VBox.margin>
-                                          <Insets bottom="10.0" left="45.0" right="10.0" top="5.0" />
-                                       </VBox.margin>
-                                    </ChoiceBox>
+                                    <StackPane prefHeight="150.0" prefWidth="200.0">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                             <children>
+                                                <Button mnemonicParsing="false" onAction="#sinMinus1" text="－">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Button>
+                                                <Label fx:id="sinNum1" alignment="CENTER" prefHeight="29.0" prefWidth="36.0" text="0" textAlignment="CENTER">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <Button mnemonicParsing="false" onAction="#sinPlus1" prefWidth="35.0" text="＋">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                          <Button fx:id="sinSelBtn1" mnemonicParsing="false" onAction="#sinSel1" prefHeight="27.0" prefWidth="105.0" text="선택하기">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
                                  </children>
                               </VBox>
                               <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
@@ -466,11 +751,34 @@
                                           <Insets left="70.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <ChoiceBox fx:id="chBuger5" prefWidth="100.0">
-                                       <VBox.margin>
-                                          <Insets bottom="10.0" left="45.0" right="10.0" top="5.0" />
-                                       </VBox.margin>
-                                    </ChoiceBox>
+                                    <StackPane prefHeight="150.0" prefWidth="200.0">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                             <children>
+                                                <Button mnemonicParsing="false" onAction="#sinMinus5" text="－">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Button>
+                                                <Label fx:id="sinNum5" alignment="CENTER" prefHeight="29.0" prefWidth="36.0" text="0" textAlignment="CENTER">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <Button mnemonicParsing="false" onAction="#sinPlus5" prefWidth="35.0" text="＋">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                          <Button fx:id="sinSelBtn5" mnemonicParsing="false" onAction="#sinSel5" prefHeight="27.0" prefWidth="105.0" text="선택하기">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
                                  </children>
                               </VBox>
                               <VBox prefHeight="612.0" prefWidth="300.0" GridPane.columnIndex="1">
@@ -498,11 +806,34 @@
                                           <Insets left="70.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <ChoiceBox fx:id="chBuger2" prefWidth="100.0">
-                                       <VBox.margin>
-                                          <Insets bottom="10.0" left="45.0" right="10.0" top="5.0" />
-                                       </VBox.margin>
-                                    </ChoiceBox>
+                                    <StackPane prefHeight="150.0" prefWidth="200.0">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                             <children>
+                                                <Button mnemonicParsing="false" onAction="#sinMinus2" text="－">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Button>
+                                                <Label fx:id="sinNum2" alignment="CENTER" prefHeight="29.0" prefWidth="36.0" text="0" textAlignment="CENTER">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <Button mnemonicParsing="false" onAction="#sinPlus2" prefWidth="35.0" text="＋">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                          <Button fx:id="sinSelBtn2" mnemonicParsing="false" onAction="#sinSel2" prefHeight="27.0" prefWidth="105.0" text="선택하기">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
                                  </children>
                               </VBox>
                            </children>
@@ -548,11 +879,34 @@
                                           <Insets left="70.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <ChoiceBox fx:id="chDrink1" prefWidth="100.0">
-                                       <VBox.margin>
-                                          <Insets bottom="10.0" left="45.0" right="10.0" top="5.0" />
-                                       </VBox.margin>
-                                    </ChoiceBox>
+                                    <StackPane prefHeight="150.0" prefWidth="200.0">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                             <children>
+                                                <Button mnemonicParsing="false" onAction="#bevMinus1" text="－">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Button>
+                                                <Label fx:id="bevNum1" alignment="CENTER" prefHeight="29.0" prefWidth="36.0" text="0" textAlignment="CENTER">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <Button mnemonicParsing="false" onAction="#bevPlus1" prefWidth="35.0" text="＋">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                          <Button fx:id="bevSelBtn1" mnemonicParsing="false" onAction="#bevSel1" prefHeight="27.0" prefWidth="105.0" text="선택하기">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
                                  </children>
                               </VBox>
                               <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
@@ -580,11 +934,34 @@
                                           <Insets left="70.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <ChoiceBox fx:id="chDrink2" prefWidth="100.0">
-                                       <VBox.margin>
-                                          <Insets bottom="10.0" left="45.0" right="10.0" top="5.0" />
-                                       </VBox.margin>
-                                    </ChoiceBox>
+                                    <StackPane prefHeight="150.0" prefWidth="200.0">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                             <children>
+                                                <Button mnemonicParsing="false" onAction="#bevMinus2" text="－">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Button>
+                                                <Label fx:id="bevNum2" alignment="CENTER" prefHeight="29.0" prefWidth="36.0" text="0" textAlignment="CENTER">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <Button mnemonicParsing="false" onAction="#bevPlus2" prefWidth="35.0" text="＋">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                          <Button fx:id="bevSelBtn2" mnemonicParsing="false" onAction="#bevSel2" prefHeight="27.0" prefWidth="105.0" text="선택하기">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
                                  </children>
                               </VBox>
                               <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2">
@@ -612,11 +989,34 @@
                                           <Insets left="65.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <ChoiceBox fx:id="chDrink3" prefWidth="100.0">
-                                       <VBox.margin>
-                                          <Insets bottom="10.0" left="45.0" right="10.0" top="5.0" />
-                                       </VBox.margin>
-                                    </ChoiceBox>
+                                    <StackPane prefHeight="150.0" prefWidth="200.0">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                             <children>
+                                                <Button mnemonicParsing="false" onAction="#bevMinus3" text="－">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Button>
+                                                <Label fx:id="bevNum3" alignment="CENTER" prefHeight="29.0" prefWidth="36.0" text="0" textAlignment="CENTER">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <Button mnemonicParsing="false" onAction="#bevPlus3" prefWidth="35.0" text="＋">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                          <Button fx:id="bevSelBtn3" mnemonicParsing="false" onAction="#bevSel3" prefHeight="27.0" prefWidth="105.0" text="선택하기">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
                                  </children>
                               </VBox>
                               <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
@@ -644,11 +1044,34 @@
                                           <Insets left="70.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <ChoiceBox fx:id="chDrink4" prefWidth="100.0">
-                                       <VBox.margin>
-                                          <Insets bottom="10.0" left="45.0" right="10.0" top="5.0" />
-                                       </VBox.margin>
-                                    </ChoiceBox>
+                                    <StackPane prefHeight="150.0" prefWidth="200.0">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                             <children>
+                                                <Button mnemonicParsing="false" onAction="#bevMinus4" text="－">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Button>
+                                                <Label fx:id="bevNum4" alignment="CENTER" prefHeight="29.0" prefWidth="36.0" text="0" textAlignment="CENTER">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <Button mnemonicParsing="false" onAction="#bevPlus4" prefWidth="35.0" text="＋">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                          <Button fx:id="bevSelBtn4" mnemonicParsing="false" onAction="#bevSel4" prefHeight="27.0" prefWidth="105.0" text="선택하기">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
                                  </children>
                               </VBox>
                               <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
@@ -676,11 +1099,34 @@
                                           <Insets left="75.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <ChoiceBox fx:id="chDrink5" prefWidth="100.0">
-                                       <VBox.margin>
-                                          <Insets bottom="10.0" left="45.0" right="10.0" top="5.0" />
-                                       </VBox.margin>
-                                    </ChoiceBox>
+                                    <StackPane prefHeight="150.0" prefWidth="200.0">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                             <children>
+                                                <Button mnemonicParsing="false" onAction="#bevMinus5" text="－">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Button>
+                                                <Label fx:id="bevNum5" alignment="CENTER" prefHeight="29.0" prefWidth="36.0" text="0" textAlignment="CENTER">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <Button mnemonicParsing="false" onAction="#bevPlus5" prefWidth="35.0" text="＋">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                          <Button fx:id="bevSelBtn5" mnemonicParsing="false" onAction="#bevSel5" prefHeight="27.0" prefWidth="105.0" text="선택하기">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
                                  </children>
                               </VBox>
                               <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
@@ -708,11 +1154,34 @@
                                           <Insets left="70.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <ChoiceBox fx:id="chDrink6" prefWidth="100.0">
-                                       <VBox.margin>
-                                          <Insets bottom="10.0" left="45.0" right="10.0" top="5.0" />
-                                       </VBox.margin>
-                                    </ChoiceBox>
+                                    <StackPane prefHeight="150.0" prefWidth="200.0">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                             <children>
+                                                <Button mnemonicParsing="false" onAction="#bevMinus6" text="－">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Button>
+                                                <Label fx:id="bevNum6" alignment="CENTER" prefHeight="29.0" prefWidth="36.0" text="0" textAlignment="CENTER">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <Button mnemonicParsing="false" onAction="#bevPlus6" prefWidth="35.0" text="＋">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                          <Button fx:id="bevSelBtn6" mnemonicParsing="false" onAction="#bevSel6" prefHeight="27.0" prefWidth="105.0" text="선택하기">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
                                  </children>
                               </VBox>
                               <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="2">
@@ -740,11 +1209,34 @@
                                           <Insets left="70.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <ChoiceBox fx:id="chDrink7" prefWidth="100.0">
-                                       <VBox.margin>
-                                          <Insets bottom="10.0" left="45.0" right="10.0" top="5.0" />
-                                       </VBox.margin>
-                                    </ChoiceBox>
+                                    <StackPane prefHeight="150.0" prefWidth="200.0">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                             <children>
+                                                <Button mnemonicParsing="false" onAction="#bevMinus7" text="－">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Button>
+                                                <Label fx:id="bevNum7" alignment="CENTER" prefHeight="29.0" prefWidth="36.0" text="0" textAlignment="CENTER">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <Button mnemonicParsing="false" onAction="#bevPlus7" prefWidth="35.0" text="＋">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                          <Button fx:id="bevSelBtn7" mnemonicParsing="false" onAction="#bevSel7" prefHeight="27.0" prefWidth="105.0" text="선택하기">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
                                  </children>
                               </VBox>
                               <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
@@ -772,11 +1264,34 @@
                                           <Insets left="70.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <ChoiceBox fx:id="chDrink8" prefWidth="100.0">
-                                       <VBox.margin>
-                                          <Insets bottom="10.0" left="45.0" right="10.0" top="5.0" />
-                                       </VBox.margin>
-                                    </ChoiceBox>
+                                    <StackPane prefHeight="150.0" prefWidth="200.0">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                             <children>
+                                                <Button mnemonicParsing="false" onAction="#bevMinus8" text="－">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Button>
+                                                <Label fx:id="bevNum8" alignment="CENTER" prefHeight="29.0" prefWidth="36.0" text="0" textAlignment="CENTER">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <Button mnemonicParsing="false" onAction="#bevPlus8" prefWidth="35.0" text="＋">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                          <Button fx:id="bevSelBtn8" mnemonicParsing="false" onAction="#bevSel8" prefHeight="27.0" prefWidth="105.0" text="선택하기">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
                                  </children>
                               </VBox>
                            </children>
@@ -822,11 +1337,34 @@
                                           <Insets left="70.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <ChoiceBox fx:id="chSide3" prefWidth="100.0">
-                                       <VBox.margin>
-                                          <Insets bottom="10.0" left="45.0" right="10.0" top="5.0" />
-                                       </VBox.margin>
-                                    </ChoiceBox>
+                                    <StackPane prefHeight="150.0" prefWidth="200.0">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                             <children>
+                                                <Button mnemonicParsing="false" onAction="#sidMinus3" text="－">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Button>
+                                                <Label fx:id="sidNum3" alignment="CENTER" prefHeight="29.0" prefWidth="36.0" text="0" textAlignment="CENTER">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <Button mnemonicParsing="false" onAction="#sidPlus3" prefWidth="35.0" text="＋">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                          <Button fx:id="sidSelBtn3" mnemonicParsing="false" onAction="#sidSel3" prefHeight="27.0" prefWidth="105.0" text="선택하기">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
                                  </children>
                               </VBox>
                               <VBox prefHeight="200.0" prefWidth="100.0">
@@ -854,11 +1392,34 @@
                                           <Insets left="70.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <ChoiceBox fx:id="chSide1" prefWidth="100.0">
-                                       <VBox.margin>
-                                          <Insets bottom="10.0" left="45.0" right="10.0" top="5.0" />
-                                       </VBox.margin>
-                                    </ChoiceBox>
+                                    <StackPane prefHeight="150.0" prefWidth="200.0">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                             <children>
+                                                <Button mnemonicParsing="false" onAction="#sidMinus1" text="－">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Button>
+                                                <Label fx:id="sidNum1" alignment="CENTER" prefHeight="29.0" prefWidth="36.0" text="0" textAlignment="CENTER">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <Button mnemonicParsing="false" onAction="#sidPlus1" prefWidth="35.0" text="＋">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                          <Button fx:id="sidSelBtn1" mnemonicParsing="false" onAction="#sidSel1" prefHeight="27.0" prefWidth="105.0" text="선택하기">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
                                  </children>
                               </VBox>
                               <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
@@ -886,11 +1447,34 @@
                                           <Insets left="70.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <ChoiceBox fx:id="chSide4" prefWidth="100.0">
-                                       <VBox.margin>
-                                          <Insets bottom="10.0" left="45.0" right="10.0" top="5.0" />
-                                       </VBox.margin>
-                                    </ChoiceBox>
+                                    <StackPane prefHeight="150.0" prefWidth="200.0">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                             <children>
+                                                <Button mnemonicParsing="false" onAction="#sidMinus4" text="－">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Button>
+                                                <Label fx:id="sidNum4" alignment="CENTER" prefHeight="29.0" prefWidth="36.0" text="0" textAlignment="CENTER">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <Button mnemonicParsing="false" onAction="#sidPlus4" prefWidth="35.0" text="＋">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                          <Button fx:id="sidSelBtn4" mnemonicParsing="false" onAction="#sidSel4" prefHeight="27.0" prefWidth="105.0" text="선택하기">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
                                  </children>
                               </VBox>
                               <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
@@ -918,11 +1502,34 @@
                                           <Insets left="75.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <ChoiceBox fx:id="chSide2" prefWidth="100.0">
-                                       <VBox.margin>
-                                          <Insets bottom="10.0" left="45.0" right="10.0" top="5.0" />
-                                       </VBox.margin>
-                                    </ChoiceBox>
+                                    <StackPane prefHeight="150.0" prefWidth="200.0">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                             <children>
+                                                <Button mnemonicParsing="false" onAction="#sidMinus2" text="－">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Button>
+                                                <Label fx:id="sidNum2" alignment="CENTER" prefHeight="29.0" prefWidth="36.0" text="0" textAlignment="CENTER">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <Button mnemonicParsing="false" onAction="#sidPlus2" prefWidth="35.0" text="＋">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                          <Button fx:id="sidSelBtn2" mnemonicParsing="false" onAction="#sidSel2" prefHeight="27.0" prefWidth="105.0" text="선택하기">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
                                  </children>
                               </VBox>
                               <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
@@ -950,11 +1557,34 @@
                                           <Insets left="70.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <ChoiceBox fx:id="chSide5" prefWidth="100.0">
-                                       <VBox.margin>
-                                          <Insets bottom="10.0" left="45.0" right="10.0" top="5.0" />
-                                       </VBox.margin>
-                                    </ChoiceBox>
+                                    <StackPane prefHeight="150.0" prefWidth="200.0">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                             <children>
+                                                <Button mnemonicParsing="false" onAction="#sidMinus5" text="－">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Button>
+                                                <Label fx:id="sidNum5" alignment="CENTER" prefHeight="29.0" prefWidth="36.0" text="0" textAlignment="CENTER">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <Button mnemonicParsing="false" onAction="#sidPlus5" prefWidth="35.0" text="＋">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                          <Button fx:id="sidSelBtn5" mnemonicParsing="false" onAction="#sidSel5" prefHeight="27.0" prefWidth="105.0" text="선택하기">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
                                  </children>
                               </VBox>
                               <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
@@ -982,11 +1612,34 @@
                                           <Insets left="70.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <ChoiceBox fx:id="chSide6" prefWidth="100.0">
-                                       <VBox.margin>
-                                          <Insets bottom="10.0" left="45.0" right="10.0" top="5.0" />
-                                       </VBox.margin>
-                                    </ChoiceBox>
+                                    <StackPane prefHeight="150.0" prefWidth="200.0">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                             <children>
+                                                <Button mnemonicParsing="false" onAction="#sidMinus6" text="－">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Button>
+                                                <Label fx:id="sidNum6" alignment="CENTER" prefHeight="29.0" prefWidth="36.0" text="0" textAlignment="CENTER">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <Button mnemonicParsing="false" onAction="#sidPlus6" prefWidth="35.0" text="＋">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                          <Button fx:id="sidSelBtn6" mnemonicParsing="false" onAction="#sidSel6" prefHeight="27.0" prefWidth="105.0" text="선택하기">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
                                  </children>
                               </VBox>
                               <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="2">
@@ -1014,11 +1667,34 @@
                                           <Insets left="70.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <ChoiceBox fx:id="chSide7" prefWidth="100.0">
-                                       <VBox.margin>
-                                          <Insets bottom="10.0" left="45.0" right="10.0" top="5.0" />
-                                       </VBox.margin>
-                                    </ChoiceBox>
+                                    <StackPane prefHeight="150.0" prefWidth="200.0">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                             <children>
+                                                <Button mnemonicParsing="false" onAction="#sidMinus7" text="－">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Button>
+                                                <Label fx:id="sidNum7" alignment="CENTER" prefHeight="29.0" prefWidth="36.0" text="0" textAlignment="CENTER">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <Button mnemonicParsing="false" onAction="#sidPlus7" prefWidth="35.0" text="＋">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                          <Button fx:id="sidSelBtn7" mnemonicParsing="false" onAction="#sidSel7" prefHeight="27.0" prefWidth="105.0" text="선택하기">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
                                  </children>
                               </VBox>
                               <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
@@ -1046,11 +1722,34 @@
                                           <Insets left="70.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <ChoiceBox fx:id="chSide8" prefWidth="100.0">
-                                       <VBox.margin>
-                                          <Insets bottom="10.0" left="45.0" right="10.0" top="5.0" />
-                                       </VBox.margin>
-                                    </ChoiceBox>
+                                    <StackPane prefHeight="150.0" prefWidth="200.0">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                             <children>
+                                                <Button mnemonicParsing="false" onAction="#sidMinus8" text="－">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Button>
+                                                <Label fx:id="sidNum8" alignment="CENTER" prefHeight="29.0" prefWidth="36.0" text="0" textAlignment="CENTER">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <Button mnemonicParsing="false" onAction="#sidPlus8" prefWidth="35.0" text="＋">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                          <Button fx:id="sidSelBtn8" mnemonicParsing="false" onAction="#sidSel8" prefHeight="27.0" prefWidth="105.0" text="선택하기">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
                                  </children>
                               </VBox>
                               <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
@@ -1078,11 +1777,34 @@
                                           <Insets left="70.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <ChoiceBox fx:id="chSide9" prefWidth="100.0">
-                                       <VBox.margin>
-                                          <Insets bottom="10.0" left="45.0" right="10.0" top="5.0" />
-                                       </VBox.margin>
-                                    </ChoiceBox>
+                                    <StackPane prefHeight="150.0" prefWidth="200.0">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                             <children>
+                                                <Button mnemonicParsing="false" onAction="#sidMinus9" text="－">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Button>
+                                                <Label fx:id="sidNum9" alignment="CENTER" prefHeight="29.0" prefWidth="36.0" text="0" textAlignment="CENTER">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </Label>
+                                                <Button mnemonicParsing="false" onAction="#sidPlus9" prefWidth="35.0" text="＋">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                          <Button fx:id="sidSelBtn9" mnemonicParsing="false" onAction="#sidSel9" prefHeight="27.0" prefWidth="105.0" text="선택하기">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
                                  </children>
                               </VBox>
                            </children>
@@ -1113,6 +1835,9 @@
                      <font>
                         <Font size="18.0" />
                      </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </Button>
                   <Button mnemonicParsing="false" onAction="#cancelProc" prefHeight="40.0" prefWidth="100.0" text="취소">
                      <font>
@@ -1124,6 +1849,9 @@
                      <HBox.margin>
                         <Insets left="30.0" top="50.0" />
                      </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </Button>
                </children>
             </HBox>

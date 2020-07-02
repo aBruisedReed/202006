@@ -52,9 +52,13 @@ public class AfterLoginController extends Controller implements Initializable {
 	
 	public void orderCheck() {
 		Stage orderCheck = new Stage();
+		SingletonData sd = SingletonData.getInstance();
+		if(!sd.getOrdered()) {
+			comSrv.ErrorMsg("결제된 주문이 없습니다.");
+			return;
+		}
 		Parent form = comSrv.showWindow(orderCheck, "../view/ShowOrder.fxml");
 		
-		SingletonData sd = SingletonData.getInstance();
 		
 		Label paidPrice = (Label) form.lookup("#paidPrice");
 		Label paidHow = (Label) form.lookup("#paidHow");
