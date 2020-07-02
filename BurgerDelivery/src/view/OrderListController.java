@@ -8,12 +8,14 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import service.CommonServiceImpl;
+import service.DatabaseServiceImpl;
 import service.Goods;
 import service.PayService;
 import service.PayServiceImpl;
@@ -25,6 +27,7 @@ public class OrderListController extends Controller implements Initializable {
 	boolean flag;
 	int total;
 	CommonServiceImpl comSrv;
+	DatabaseServiceImpl dataSrv;
 	
 	@Override
 	public void setRoot(Parent root) {
@@ -37,6 +40,7 @@ public class OrderListController extends Controller implements Initializable {
 		// TODO Auto-generated method stub
 		flag = true;
 		comSrv = new CommonServiceImpl();
+		dataSrv = new DatabaseServiceImpl();
 	}
 	
 	public void orderOn() {
@@ -86,6 +90,13 @@ public class OrderListController extends Controller implements Initializable {
 		Stage pay = new Stage();
 		Parent form = comSrv.showWindow(pay, "../view/Pay.fxml"); 
 		pSvr.PayChoiceBox(form);
-		return;
+		
+		CheckBox cb2 = (CheckBox)form.lookup("#ch2");
+		cb2.setSelected(true);
+		SingletonData sd = SingletonData.getInstance();
+		Label total = (Label) form.lookup("#totalPrice");
+		total.setText(sd.getTotalPrice());
+		Label address = (Label)form.lookup("#address"); // address setText 필요
+		address.setText(dataSrv.SelectAddress(sd.getCurrentUserId()));
 	}
 }

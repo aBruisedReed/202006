@@ -13,6 +13,7 @@ import javafx.scene.control.TextField;
 import service.AddressData;
 import service.CommonService;
 import service.CommonServiceImpl;
+import service.DatabaseServiceImpl;
 import service.FindAddress;
 import service.StringContainer;
 //import service.CommonServiceImpl;
@@ -21,6 +22,7 @@ public class AddressController extends Controller implements Initializable {
 	private Parent root;
 	private CommonService comSrv;
 	private StringContainer string;
+	private DatabaseServiceImpl dataSrv;
 	
 	@Override
 	public void setRoot(Parent root) {
@@ -32,6 +34,7 @@ public class AddressController extends Controller implements Initializable {
 	public void initialize(URL location, ResourceBundle resources) {
 		// TODO Auto-
 		comSrv = new CommonServiceImpl();
+		dataSrv = new DatabaseServiceImpl();
 	}
 	
 	public void findButtonOnClick() {

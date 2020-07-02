@@ -2,6 +2,7 @@ package view;
 
 import java.io.IOException;
 import java.net.URL;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
@@ -11,19 +12,24 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import service.CommonService;
 import service.CommonServiceImpl;
+import service.Goods;
 import service.SingletonData;
 
 public class MenuController extends Controller implements Initializable {
 	Parent root;
 	CommonService comSrv;
 	ArrayList<String> goods;
+	int total;
 	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
@@ -338,21 +344,37 @@ public class MenuController extends Controller implements Initializable {
 		}
 		
 		Stage orderList = new Stage();
-		comSrv.showWindow(orderList, "../view/OrderList.fxml", goods);
+		Parent form = comSrv.showWindow(orderList, "../view/OrderList.fxml", goods);
 		
-// 		이벤트 처리 제대로하려면 이벤트 핸들러를 붙이거나 미리 데이터 넣고 show로 띄워야함
-//		FXMLLoader loader = new FXMLLoader(getClass().getResource("OrderList.fxml"));
-//		Parent root = null;
-//		try {
-//			root = loader.load();
-//			orderList.setScene(new Scene(root));
-//		} catch(IOException e) {
-//			e.printStackTrace();
-//		}
-////		root.setUserData(goods);
-//		TableView<String> tableView = (TableView<String>)root.lookup("#orderTable"); //String?
-//		Controller ctrler = loader.getController();
-//		ctrler.setRoot(root);
-//		orderList.show();
+		total = 0;
+		
+		goods = (ArrayList<String>)form.getUserData();
+		
+		TableView<Goods> tv = (TableView<Goods>) form.lookup("#orderTable");
+
+		TableColumn nameColumn = new TableColumn("상품명");
+		nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
+		TableColumn priceColumn = new TableColumn("가격");
+		priceColumn.setCellValueFactory(new PropertyValueFactory<>("price"));
+		TableColumn amountColumn = new TableColumn("수량");
+		amountColumn.setCellValueFactory(new PropertyValueFactory<>("amount"));
+		
+		nameColumn.setPrefWidth(340);
+		tv.getColumns().addAll(nameColumn, priceColumn, amountColumn);
+		
+		DecimalFormat formatter = new DecimalFormat("###,###");
+		for(String good : goods) {
+			String[] goodDetail = good.split(",");
+			Goods goods = new Goods();
+			goods.setName(goodDetail[0]);
+			goods.setPrice(formatter.format(Integer.parseInt(goodDetail[1])));
+			goods.setAmount(Integer.parseInt(goodDetail[2]));
+			total += Integer.parseInt(goodDetail[1])*goods.getAmount();
+			tv.getItems().add(goods);
+		}
+		Label totalLabel = (Label) form.lookup("#total");
+		totalLabel.setText("합계 금액 : "+formatter.format(total)+" 원");
+		sd.setTotalPrice(formatter.format(total)+" 원");
+		sd.setGoods(goods);
 	}
 }

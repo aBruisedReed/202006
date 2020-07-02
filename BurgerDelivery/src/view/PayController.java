@@ -45,22 +45,6 @@ public class PayController extends Controller implements Initializable {
 		dataSrv = new DatabaseServiceImpl();
 	}
 	
-	
-	public void onPay() {
-		if(flag==false) {
-			return;
-		}
-		CheckBox cb2 = (CheckBox)root.lookup("#ch2");
-		cb2.setSelected(true);
-		SingletonData sd = SingletonData.getInstance();
-		Label total = (Label) root.lookup("#totalPrice");
-		total.setText(sd.getTotalPrice());
-		Label address = (Label)root.lookup("#address"); // address setText 필요
-		address.setText(dataSrv.SelectAddress(sd.getCurrentUserId()));
-		
-		flag=false;
-	}
-	
 	public void closeMenuWindow(String payHow) {
 		SingletonData sd = SingletonData.getInstance();
 		Parent root = sd.getWindow(); 
