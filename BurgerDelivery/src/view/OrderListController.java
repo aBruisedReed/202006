@@ -46,6 +46,10 @@ public class OrderListController extends Controller implements Initializable {
 		}
 		
 		goods = (ArrayList<String>)root.getUserData();
+		
+		SingletonData sd = SingletonData.getInstance();
+		
+		
 		TableView<Goods> tv = (TableView<Goods>) root.lookup("#orderTable");
 
 		TableColumn nameColumn = new TableColumn("상품명");
@@ -70,8 +74,8 @@ public class OrderListController extends Controller implements Initializable {
 		}
 		Label totalLabel = (Label) root.lookup("#total");
 		totalLabel.setText("합계 금액 : "+formatter.format(total)+" 원");
-		SingletonData sd = SingletonData.getInstance();
 		sd.setTotalPrice(formatter.format(total)+" 원");
+		sd.setGoods(goods);
 		
 		flag = false;
 	}
@@ -80,7 +84,7 @@ public class OrderListController extends Controller implements Initializable {
 		PayService pSvr = new PayServiceImpl();
 		comSrv.WindowClose(event);
 		Stage pay = new Stage();
-		Parent form = comSrv.showWindow(pay, "../view/Pay.fxml"); //가격 전달해야함
+		Parent form = comSrv.showWindow(pay, "../view/Pay.fxml"); 
 		pSvr.PayChoiceBox(form);
 		return;
 	}

@@ -1,5 +1,7 @@
 package service;
 
+import java.util.ArrayList;
+
 import javafx.scene.Parent;
 
 public class SingletonData {
@@ -9,6 +11,8 @@ public class SingletonData {
 	String currentUserId;
 	String totalPrice;
 	Parent window;
+	ArrayList<String> goods;
+	String paidHow;
 
 	private SingletonData() { 
 		isOrdered = false;
@@ -40,5 +44,17 @@ public class SingletonData {
 	}
 	public void setOrdered(boolean isOrdered) {
 		this.isOrdered = isOrdered;
+	}
+	public ArrayList<String> getGoods() {
+		return goods;
+	}
+	public void setGoods(ArrayList<String> goods) {
+		this.goods = goods;
+	}
+	public String getPaidHow() {
+		return paidHow;
+	}
+	public void setPaidHow(String paidHow) {
+		this.paidHow = paidHow;
 	}
 }

@@ -61,10 +61,11 @@ public class PayController extends Controller implements Initializable {
 		flag=false;
 	}
 	
-	public void closeMenuWindow() {
+	public void closeMenuWindow(String payHow) {
 		SingletonData sd = SingletonData.getInstance();
 		Parent root = sd.getWindow(); 
 		Stage stage = (Stage)root.getScene().getWindow();
+		sd.setPaidHow(payHow); //
 		sd.setOrdered(true); //주문 상태 변경
 		stage.close();
 	}
@@ -81,12 +82,12 @@ public class PayController extends Controller implements Initializable {
 			return;
 		}else if (payselect.getValue() == "현금") {
 			comSrv.ErrorMsg("결제 완료", "결제 완료", "현금으로 결제 하였습니다.");
-			closeMenuWindow(); //결제 완료시 메뉴 닫기
+			closeMenuWindow(payselect.getValue()); //결제 완료시 메뉴 닫기
 			comSrv.WindowClose(event);
 			return;
 		}else if (payselect.getValue() == "신용카드") {
 			comSrv.ErrorMsg("결제 완료", "결제 완료", "신용카드로 결제 하였습니다.");
-			closeMenuWindow();
+			closeMenuWindow(payselect.getValue());
 			comSrv.WindowClose(event);
 			return;
 		}
