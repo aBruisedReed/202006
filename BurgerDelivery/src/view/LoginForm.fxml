@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
@@ -72,9 +79,6 @@
                            <GridPane.margin>
                               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                            </GridPane.margin>
-                           <font>
-                              <Font name="Gulim" size="12.0" />
-                           </font>
                         </PasswordField>
                      </children>
                      <columnConstraints>
