@@ -66,7 +66,7 @@ public class LoginServiceImpl implements LoginService{
 	    MenuService mSrv = new MenuServiceImpl();
 		Stage menu = new Stage();
 		Parent form = comSrv.showWindow(menu, "../view/Menu.fxml");
-		mSrv.AddChoiceBox(form); //초이스 박스 수량 선택
+//		mSrv.AddChoiceBox(form); //초이스 박스 수량 선택
 		return form;
 	} 
 
