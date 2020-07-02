@@ -61,6 +61,9 @@ public class LoginController extends Controller implements Initializable {
 				loginSrv.AfterLogin();
 			} else {
 				com.ErrorMsg("아이디 패스워드가 틀립니다.");
+				idTxt.clear();
+				pwTxt.clear();
+				idTxt.requestFocus();
 			}
 		}
 	}

@@ -71,11 +71,11 @@ public class PayController extends Controller implements Initializable {
 			comSrv.ErrorMsg("결제 방식을 선택해 주세요");
 			return;
 		}else if (payselect.getValue() == "현금") {
-			comSrv.ErrorMsg("현금으로 결제 하였습니다");
+			comSrv.ErrorMsg("결제 완료", "현금으로 결제 하였습니다.");
 			comSrv.WindowClose(event);
 			return;
 		}else if (payselect.getValue() == "신용카드") {
-			comSrv.ErrorMsg("신용카드로 결제 하였습니다");
+			comSrv.ErrorMsg("결제 완료", "신용카드로 결제 하였습니다.");
 			comSrv.WindowClose(event);
 			return;
 		}
