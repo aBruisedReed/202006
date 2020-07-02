@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
@@ -10,7 +17,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"  onMouseMoved="#paneProc" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.MainController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseMoved="#paneProc" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.MainController">
    <center>
       <ImageView fx:id="imageView1" fitHeight="298.0" fitWidth="1244.0" onMouseMoved="#ivProc" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="TOP_LEFT">
          <image>
@@ -25,17 +32,6 @@
       <HBox alignment="CENTER" prefHeight="82.0" prefWidth="600.0" spacing="30.0" BorderPane.alignment="CENTER">
          <children>
             <Button fx:id="loginBtn" alignment="CENTER" mnemonicParsing="false" onAction="#loginStart" prefHeight="50.0" prefWidth="170.0" style="-fx-background-color: #DB0000; -fx-background-radius: 20;" text="Login" textFill="WHITE">
-               <font>
-                  <Font name="Arial Bold" size="18.0" />
-               </font>
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
-            <Button fx:id="joinBtn" alignment="CENTER" mnemonicParsing="false" onAction="#joinStart" prefHeight="50.0" prefWidth="170.0" style="-fx-background-color: #DB0000; -fx-background-radius: 20;" text="Join" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="18.0" />
                </font>
