@@ -65,6 +65,7 @@ public class PayController extends Controller implements Initializable {
 		SingletonData sd = SingletonData.getInstance();
 		Parent root = sd.getWindow(); 
 		Stage stage = (Stage)root.getScene().getWindow();
+		sd.setOrdered(true); //주문 상태 변경
 		stage.close();
 	}
 	
