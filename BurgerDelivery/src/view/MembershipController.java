@@ -29,6 +29,7 @@ public class MembershipController extends Controller implements Initializable {
 	DatabaseService db;
 	StringContainer string;
 	boolean flag;
+	boolean idCheck;
 	@Override
 	public void setRoot(Parent root) {
 		// TODO Auto-generated method stub
@@ -43,6 +44,7 @@ public class MembershipController extends Controller implements Initializable {
 		db = new DatabaseServiceImpl();
 		string = new StringContainer();
 		flag = true;
+		idCheck = false;
 	}
 	public void cancelProc(ActionEvent event) {
 		comSrv.WindowClose(event);
@@ -99,10 +101,15 @@ public class MembershipController extends Controller implements Initializable {
 		System.out.println("전화번호 : "+" "+member.getPhone());
 		System.out.println("주소 : "+" "+member.getAddress());
 		
-		db.Insert(member);
-		comSrv.ErrorMsg("가입","가입 성공!","가입이 완료 되었습니다.");
-		Stage s = (Stage) root.getScene().getWindow();
-		s.close();
+		if(idCheck) {
+			db.Insert(member);
+			comSrv.ErrorMsg("가입","가입 성공!","가입이 완료 되었습니다.");
+			Stage s = (Stage) root.getScene().getWindow();
+			s.close();
+		}
+		else {
+			comSrv.ErrorMsg("Error", "아이디 중복 확인을 해주세요.");
+		}
 		
 	}
 	
@@ -117,6 +124,7 @@ public class MembershipController extends Controller implements Initializable {
 				comSrv.ErrorMsg("중복된 ID","중복된 ID","이미 존재하는 ID입니다.");
 			} else {
 				comSrv.ErrorMsg("사용 가능한 ID","사용 가능한 ID","사용 가능한 ID입니다.");
+				idCheck = true;
 			}
 		}
 	}
