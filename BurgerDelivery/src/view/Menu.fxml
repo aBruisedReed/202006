@@ -9,216 +9,223 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<ScrollPane prefHeight="1200.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.MenuController">
+<ScrollPane prefHeight="800.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.MenuController">
    <content>
-      <BorderPane fx:id="MenuBorder" maxHeight="1200.0" prefHeight="1200.0" prefWidth="900.0" stylesheets="@MainTheme.css">
+      <BorderPane fx:id="MenuBorder" maxHeight="1200.0" prefHeight="800.0" prefWidth="600.0" stylesheets="@MainTheme.css">
          <center>
-            <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+            <TabPane prefHeight="180.0" prefWidth="180.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
               <tabs>
                 <Tab text="햄버거 세트">
                      <content>
-                        <GridPane>
+                        <GridPane prefHeight="629.0" prefWidth="685.0">
                           <columnConstraints>
                             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                           </columnConstraints>
                           <rowConstraints>
                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                           </rowConstraints>
-                           <padding>
-                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                           </padding>
                            <children>
-                              <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="2">
+                              <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                  <children>
-                                    <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="120.0" fitWidth="170.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@../../resource/set/1955set.png" />
                                        </image>
                                        <VBox.margin>
-                                          <Insets left="30.0" top="10.0" />
+                                          <Insets left="15.0" top="40.0" />
                                        </VBox.margin>
                                     </ImageView>
                                     <Label text="1955 버거™ ">
                                        <VBox.margin>
-                                          <Insets left="80.0" right="10.0" top="10.0" />
+                                          <Insets left="60.0" right="10.0" top="10.0" />
                                        </VBox.margin>
                                     </Label>
                                     <Label text="￦8,000">
                                        <VBox.margin>
-                                          <Insets left="100.0" top="10.0" />
+                                          <Insets left="70.0" top="10.0" />
                                        </VBox.margin>
                                     </Label>
                                     <Label text="898~1,047 Kcal">
                                        <VBox.margin>
-                                          <Insets left="70.0" top="10.0" />
+                                          <Insets left="50.0" top="10.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <ChoiceBox fx:id="chSet5" prefWidth="150.0" style="-fx-background-color: white; -fx-border-color: #5D5D5D;">
+                                    <ChoiceBox fx:id="chSet5" prefWidth="100.0" style="-fx-background-color: white; -fx-border-color: #5D5D5D;">
                                        <VBox.margin>
-                                          <Insets bottom="10.0" left="55.0" right="10.0" top="10.0" />
+                                          <Insets bottom="10.0" left="45.0" right="10.0" top="10.0" />
                                        </VBox.margin>
                                     </ChoiceBox>
                                  </children>
                               </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                              <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
                                  <children>
-                                    <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="120.0" fitWidth="170.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@../../resource/set/BigMcSinglePack.png" />
                                        </image>
                                        <VBox.margin>
-                                          <Insets left="30.0" top="10.0" />
+                                          <Insets left="15.0" top="40.0" />
                                        </VBox.margin>
                                     </ImageView>
-                                    <Label text="맥딜리버리 빅맥ⓡ 싱글팩">
+                                    <Label text="맥딜리버리 빅맥ⓡ">
                                        <VBox.margin>
-                                          <Insets left="40.0" right="10.0" top="10.0" />
+                                          <Insets left="30.0" right="10.0" top="10.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Label text="싱글팩">
+                                       <VBox.margin>
+                                          <Insets left="70.0" />
                                        </VBox.margin>
                                     </Label>
                                     <Label text="￦11,000">
                                        <VBox.margin>
-                                          <Insets left="90.0" top="10.0" />
+                                          <Insets left="60.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
                                     <Label text="1,204~1,501 Kcal">
                                        <VBox.margin>
-                                          <Insets left="60.0" top="10.0" />
+                                          <Insets left="30.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <ChoiceBox fx:id="chSet6" prefWidth="150.0" style="-fx-background-color: white; -fx-border-color: #5D5D5D;">
+                                    <ChoiceBox fx:id="chSet6" prefWidth="100.0" style="-fx-background-color: white; -fx-border-color: #5D5D5D;">
                                        <VBox.margin>
-                                          <Insets bottom="10.0" left="55.0" right="10.0" top="10.0" />
+                                          <Insets bottom="10.0" left="45.0" right="10.0" top="5.0" />
+                                       </VBox.margin>
+                                    </ChoiceBox>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2">
+                                 <children>
+                                    <ImageView fitHeight="120.0" fitWidth="170.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../resource/set/ShanghaiSinglePack.png" />
+                                       </image>
+                                       <VBox.margin>
+                                          <Insets left="15.0" top="40.0" />
+                                       </VBox.margin>
+                                    </ImageView>
+                                    <Label text="맥딜리버리 상하이">
+                                       <VBox.margin>
+                                          <Insets left="30.0" right="10.0" top="10.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Label text=" 버거 싱글팩 ">
+                                       <VBox.margin>
+                                          <Insets left="50.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Label text="￦11,000">
+                                       <VBox.margin>
+                                          <Insets left="60.0" top="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Label text="1,304~1,452 Kcal">
+                                       <VBox.margin>
+                                          <Insets left="40.0" top="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <ChoiceBox fx:id="chSet3" prefWidth="100.0" style="-fx-background-color: white; -fx-border-color: #5D5D5D;" styleClass="combo-box" stylesheets="@MainTheme.css">
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" left="45.0" right="10.0" top="5.0" />
                                        </VBox.margin>
                                     </ChoiceBox>
                                  </children>
                               </VBox>
                               <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
                                  <children>
-                                    <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@../../resource/set/ShanghaiSinglePack.png" />
-                                       </image>
-                                       <VBox.margin>
-                                          <Insets left="30.0" top="10.0" />
-                                       </VBox.margin>
-                                    </ImageView>
-                                    <Label text="맥딜리버리 상하이 버거 싱글팩 ">
-                                       <VBox.margin>
-                                          <Insets left="30.0" right="10.0" top="10.0" />
-                                       </VBox.margin>
-                                    </Label>
-                                    <Label text="￦11,000">
-                                       <VBox.margin>
-                                          <Insets left="90.0" top="10.0" />
-                                       </VBox.margin>
-                                    </Label>
-                                    <Label text="1,304~1,452 Kcal">
-                                       <VBox.margin>
-                                          <Insets left="60.0" top="10.0" />
-                                       </VBox.margin>
-                                    </Label>
-                                    <ChoiceBox fx:id="chSet3" prefWidth="150.0" style="-fx-background-color: white; -fx-border-color: #5D5D5D;" styleClass="combo-box" stylesheets="@MainTheme.css">
-                                       <VBox.margin>
-                                          <Insets bottom="10.0" left="55.0" right="10.0" top="10.0" />
-                                       </VBox.margin>
-                                    </ChoiceBox>
-                                 </children>
-                              </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
-                                 <children>
-                                    <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="120.0" fitWidth="170.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@../../resource/set/McChickenMozzarellaSet.png" />
                                        </image>
                                        <VBox.margin>
-                                          <Insets left="30.0" top="10.0" />
+                                          <Insets left="15.0" top="40.0" />
                                        </VBox.margin>
                                     </ImageView>
                                     <Label text="맥치킨ⓡ 모짜렐라">
                                        <VBox.margin>
-                                          <Insets left="60.0" right="10.0" top="10.0" />
+                                          <Insets left="30.0" right="10.0" top="10.0" />
                                        </VBox.margin>
                                     </Label>
                                     <Label text="￦6,900">
                                        <VBox.margin>
-                                          <Insets left="90.0" top="10.0" />
+                                          <Insets left="60.0" top="10.0" />
                                        </VBox.margin>
                                     </Label>
                                     <Label text="1,038~1,1187 Kcal">
                                        <VBox.margin>
-                                          <Insets left="60.0" top="10.0" />
+                                          <Insets left="30.0" top="10.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <ChoiceBox fx:id="chSet4" prefWidth="150.0" style="-fx-background-color: white; -fx-border-color: #5D5D5D;">
+                                    <ChoiceBox fx:id="chSet4" prefWidth="100.0" style="-fx-background-color: white; -fx-border-color: #5D5D5D;">
                                        <VBox.margin>
-                                          <Insets bottom="10.0" left="55.0" right="10.0" top="10.0" />
+                                          <Insets bottom="10.0" left="45.0" right="10.0" top="10.0" />
                                        </VBox.margin>
                                     </ChoiceBox>
                                  </children>
                               </VBox>
                               <VBox prefHeight="200.0" prefWidth="100.0">
                                  <children>
-                                    <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="120.0" fitWidth="170.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@../../resource/set/ChickenSnackPack.png" />
                                        </image>
                                        <VBox.margin>
-                                          <Insets left="30.0" top="10.0" />
+                                          <Insets left="15.0" top="40.0" />
                                        </VBox.margin>
                                     </ImageView>
                                     <Label text="맥딜리버리 치킨 스낵팩">
                                        <VBox.margin>
-                                          <Insets left="50.0" right="10.0" top="10.0" />
+                                          <Insets left="20.0" right="10.0" top="10.0" />
                                        </VBox.margin>
                                     </Label>
                                     <Label text="￦11,000">
                                        <VBox.margin>
-                                          <Insets left="90.0" top="10.0" />
+                                          <Insets left="60.0" top="10.0" />
                                        </VBox.margin>
                                     </Label>
                                     <Label text="1,204~1,501 Kcal">
                                        <VBox.margin>
-                                          <Insets left="60.0" top="10.0" />
+                                          <Insets left="35.0" top="10.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <ChoiceBox fx:id="chSet1" prefWidth="150.0" style="-fx-background-color: white; -fx-border-color: #5D5D5D;" stylesheets="@MainTheme.css">
+                                    <ChoiceBox fx:id="chSet1" prefWidth="100.0" style="-fx-background-color: white; -fx-border-color: #5D5D5D;" stylesheets="@MainTheme.css">
                                        <VBox.margin>
-                                          <Insets bottom="10.0" left="55.0" right="10.0" top="10.0" />
+                                          <Insets bottom="10.0" left="45.0" right="10.0" top="10.0" />
                                        </VBox.margin>
                                     </ChoiceBox>
                                  </children>
                               </VBox>
                               <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
                                  <children>
-                                    <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="120.0" fitWidth="170.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@../../resource/set/TripleCheeseSet.png" />
                                        </image>
                                        <VBox.margin>
-                                          <Insets left="30.0" top="10.0" />
+                                          <Insets left="15.0" top="40.0" />
                                        </VBox.margin>
                                     </ImageView>
                                     <Label text="트리플 치즈버거">
                                        <VBox.margin>
-                                          <Insets left="70.0" right="10.0" top="10.0" />
+                                          <Insets left="40.0" right="10.0" top="10.0" />
                                        </VBox.margin>
                                     </Label>
                                     <Label text="￦7,900">
                                        <VBox.margin>
-                                          <Insets left="100.0" top="10.0" />
+                                          <Insets left="70.0" top="10.0" />
                                        </VBox.margin>
                                     </Label>
                                     <Label text="987~1,136 Kcal">
                                        <VBox.margin>
-                                          <Insets left="70.0" top="10.0" />
+                                          <Insets left="45.0" top="10.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <ChoiceBox fx:id="chSet2" prefWidth="150.0" style="-fx-background-color: white; -fx-border-color: #5D5D5D;">
+                                    <ChoiceBox fx:id="chSet2" prefWidth="100.0" style="-fx-background-color: white; -fx-border-color: #5D5D5D;">
                                        <VBox.margin>
-                                          <Insets bottom="10.0" left="55.0" right="10.0" top="10.0" />
+                                          <Insets bottom="10.0" left="45.0" right="10.0" top="10.0" />
                                        </VBox.margin>
                                     </ChoiceBox>
                                  </children>
@@ -236,276 +243,264 @@
                               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                           </columnConstraints>
                           <rowConstraints>
-                            <RowConstraints maxHeight="331.0" minHeight="10.0" prefHeight="313.0" vgrow="SOMETIMES" />
-                            <RowConstraints maxHeight="403.0" minHeight="10.0" prefHeight="259.0" vgrow="SOMETIMES" />
-                            <RowConstraints maxHeight="442.0" minHeight="10.0" prefHeight="261.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="331.0" minHeight="10.0" prefHeight="268.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="403.0" minHeight="10.0" prefHeight="267.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="442.0" minHeight="10.0" prefHeight="276.0" vgrow="SOMETIMES" />
                               <RowConstraints />
                           </rowConstraints>
                            <children>
                               <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                                  <children>
-                                    <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="100.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@../../resource/single/McChicken.png" />
                                        </image>
                                        <VBox.margin>
-                                          <Insets left="30.0" top="10.0" />
+                                          <Insets left="30.0" top="5.0" />
                                        </VBox.margin>
                                     </ImageView>
                                     <Label text="맥 치킨">
                                        <VBox.margin>
-                                          <Insets left="105.0" right="10.0" top="10.0" />
+                                          <Insets left="75.0" right="10.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
                                     <Label text="￦4,000">
                                        <VBox.margin>
-                                          <Insets left="100.0" top="10.0" />
+                                          <Insets left="70.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
                                     <Label text="482 Kcal">
                                        <VBox.margin>
-                                          <Insets left="100.0" top="10.0" />
+                                          <Insets left="70.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <ChoiceBox fx:id="chBuger8" prefWidth="150.0">
+                                    <ChoiceBox fx:id="chBuger8" prefWidth="100.0">
                                        <VBox.margin>
-                                          <Insets bottom="10.0" left="55.0" right="10.0" top="10.0" />
+                                          <Insets bottom="10.0" left="45.0" right="10.0" top="5.0" />
                                        </VBox.margin>
                                     </ChoiceBox>
                                  </children>
                               </VBox>
                               <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2">
                                  <children>
-                                    <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="100.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@../../resource/single/Shanghai.png" />
                                        </image>
                                        <VBox.margin>
-                                          <Insets left="30.0" top="10.0" />
+                                          <Insets left="30.0" top="5.0" />
                                        </VBox.margin>
                                     </ImageView>
                                     <Label text="맥스파이시 상하이버거">
                                        <VBox.margin>
-                                          <Insets left="60.0" right="10.0" top="10.0" />
+                                          <Insets left="20.0" right="10.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
                                     <Label text="￦5,200">
                                        <VBox.margin>
-                                          <Insets left="100.0" top="10.0" />
+                                          <Insets left="70.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
                                     <Label text="464 Kcal">
                                        <VBox.margin>
-                                          <Insets left="100.0" top="10.0" />
+                                          <Insets left="70.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <ChoiceBox fx:id="chBuger3" prefWidth="150.0">
+                                    <ChoiceBox fx:id="chBuger3" prefWidth="100.0">
                                        <VBox.margin>
-                                          <Insets bottom="10.0" left="55.0" right="10.0" top="10.0" />
+                                          <Insets bottom="10.0" left="45.0" right="10.0" top="5.0" />
                                        </VBox.margin>
                                     </ChoiceBox>
                                  </children>
                               </VBox>
                               <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
                                  <children>
-                                    <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="100.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@../../resource/single/BaconTomatoDeluxe.png" />
                                        </image>
                                        <VBox.margin>
-                                          <Insets left="30.0" top="10.0" />
+                                          <Insets left="30.0" top="5.0" />
                                        </VBox.margin>
                                     </ImageView>
                                     <Label text="베이컨 토마토 디럭스">
                                        <VBox.margin>
-                                          <Insets left="55.0" right="10.0" top="10.0" />
+                                          <Insets left="25.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
                                     <Label text="￦6,000">
                                        <VBox.margin>
-                                          <Insets left="100.0" top="5.0" />
+                                          <Insets left="70.0" top="5.0" />
                                        </VBox.margin>
-                                       <padding>
-                                          <Insets top="10.0" />
-                                       </padding>
                                     </Label>
                                     <Label text="542 Kcal">
                                        <VBox.margin>
-                                          <Insets left="100.0" top="5.0" />
+                                          <Insets left="70.0" top="5.0" />
                                        </VBox.margin>
-                                       <padding>
-                                          <Insets top="10.0" />
-                                       </padding>
                                     </Label>
-                                    <ChoiceBox fx:id="chBuger4" prefWidth="150.0">
+                                    <ChoiceBox fx:id="chBuger4" prefWidth="100.0">
                                        <VBox.margin>
-                                          <Insets bottom="10.0" left="55.0" right="10.0" top="5.0" />
+                                          <Insets bottom="10.0" left="45.0" right="10.0" top="5.0" />
                                        </VBox.margin>
-                                       <padding>
-                                          <Insets top="10.0" />
-                                       </padding>
                                     </ChoiceBox>
                                  </children>
                               </VBox>
                               <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="2" GridPane.rowSpan="2">
                                  <children>
-                                    <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="100.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@../../resource/single/Bulgogi.png" />
                                        </image>
                                        <VBox.margin>
-                                          <Insets left="30.0" top="10.0" />
+                                          <Insets left="30.0" top="5.0" />
                                        </VBox.margin>
                                     </ImageView>
                                     <Label text="불고기 버거">
                                        <VBox.margin>
-                                          <Insets left="90.0" right="10.0" top="10.0" />
+                                          <Insets left="60.0" right="10.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
                                     <Label text="￦2,700">
                                        <VBox.margin>
-                                          <Insets left="100.0" top="10.0" />
+                                          <Insets left="70.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
                                     <Label text="383 Kcal">
                                        <VBox.margin>
-                                          <Insets left="100.0" top="10.0" />
+                                          <Insets left="70.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <ChoiceBox fx:id="chBuger7" prefWidth="150.0">
+                                    <ChoiceBox fx:id="chBuger7" prefWidth="100.0">
                                        <VBox.margin>
-                                          <Insets bottom="10.0" left="55.0" right="10.0" top="10.0" />
+                                          <Insets bottom="10.0" left="45.0" right="10.0" top="5.0" />
                                        </VBox.margin>
                                     </ChoiceBox>
                                  </children>
                               </VBox>
                               <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
                                  <children>
-                                    <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="100.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@../../resource/single/ShSh.png" />
                                        </image>
                                        <VBox.margin>
-                                          <Insets left="30.0" top="10.0" />
+                                          <Insets left="30.0" top="5.0" />
                                        </VBox.margin>
                                     </ImageView>
                                     <Label text="슈슈버거">
                                        <VBox.margin>
-                                          <Insets left="100.0" right="10.0" top="10.0" />
+                                          <Insets left="70.0" right="10.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
                                     <Label text="￦5,000">
                                        <VBox.margin>
-                                          <Insets left="100.0" top="10.0" />
+                                          <Insets left="70.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
                                     <Label text="424 Kcal">
                                        <VBox.margin>
-                                          <Insets left="100.0" top="10.0" />
+                                          <Insets left="70.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <ChoiceBox fx:id="chBuger6" prefWidth="150.0">
+                                    <ChoiceBox fx:id="chBuger6" prefWidth="100.0">
                                        <VBox.margin>
-                                          <Insets bottom="10.0" left="55.0" right="10.0" top="10.0" />
+                                          <Insets bottom="10.0" left="45.0" right="10.0" top="5.0" />
                                        </VBox.margin>
                                     </ChoiceBox>
                                  </children>
                               </VBox>
                               <VBox prefHeight="200.0" prefWidth="100.0">
                                  <children>
-                                    <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="100.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@../../resource/single/TripleCheese.png" />
                                        </image>
                                        <VBox.margin>
-                                          <Insets left="30.0" top="10.0" />
+                                          <Insets left="30.0" top="5.0" />
                                        </VBox.margin>
                                     </ImageView>
                                     <Label text="트리플 치즈버거">
                                        <VBox.margin>
-                                          <Insets left="70.0" right="10.0" top="10.0" />
+                                          <Insets left="40.0" right="10.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
                                     <Label text="￦6,300">
                                        <VBox.margin>
-                                          <Insets left="100.0" top="10.0" />
+                                          <Insets left="70.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
                                     <Label text="619 Kcal">
                                        <VBox.margin>
-                                          <Insets left="100.0" top="10.0" />
+                                          <Insets left="70.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <ChoiceBox fx:id="chBuger1" prefWidth="150.0">
+                                    <ChoiceBox fx:id="chBuger1" prefWidth="100.0">
                                        <VBox.margin>
-                                          <Insets bottom="10.0" left="55.0" right="10.0" top="10.0" />
+                                          <Insets bottom="10.0" left="45.0" right="10.0" top="5.0" />
                                        </VBox.margin>
                                     </ChoiceBox>
                                  </children>
                               </VBox>
                               <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                  <children>
-                                    <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="100.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@../../resource/single/BigMac.png" />
                                        </image>
                                        <VBox.margin>
-                                          <Insets left="30.0" top="10.0" />
+                                          <Insets left="30.0" top="5.0" />
                                        </VBox.margin>
                                     </ImageView>
                                     <Label text="빅맥">
                                        <VBox.margin>
-                                          <Insets left="110.0" right="10.0" top="10.0" />
+                                          <Insets left="80.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
                                     <Label text="￦5,200">
                                        <VBox.margin>
-                                          <Insets left="100.0" top="10.0" />
+                                          <Insets left="70.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
                                     <Label text="548 Kcal">
                                        <VBox.margin>
-                                          <Insets left="100.0" top="5.0" />
+                                          <Insets left="70.0" top="5.0" />
                                        </VBox.margin>
-                                       <padding>
-                                          <Insets top="10.0" />
-                                       </padding>
                                     </Label>
-                                    <ChoiceBox fx:id="chBuger5" prefWidth="150.0">
+                                    <ChoiceBox fx:id="chBuger5" prefWidth="100.0">
                                        <VBox.margin>
-                                          <Insets bottom="10.0" left="55.0" right="10.0" top="10.0" />
+                                          <Insets bottom="10.0" left="45.0" right="10.0" top="5.0" />
                                        </VBox.margin>
                                     </ChoiceBox>
                                  </children>
                               </VBox>
                               <VBox prefHeight="612.0" prefWidth="300.0" GridPane.columnIndex="1">
                                  <children>
-                                    <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="100.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@../../resource/single/McChickenMozzarella.png" />
                                        </image>
                                        <VBox.margin>
-                                          <Insets left="30.0" top="10.0" />
+                                          <Insets left="30.0" top="5.0" />
                                        </VBox.margin>
                                     </ImageView>
                                     <Label text="맥치킨 모짜렐라">
                                        <VBox.margin>
-                                          <Insets left="70.0" right="10.0" top="10.0" />
+                                          <Insets left="45.0" right="10.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
                                     <Label text="￦5,400">
                                        <VBox.margin>
-                                          <Insets left="100.0" top="10.0" />
+                                          <Insets left="70.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
                                     <Label text="670 Kcal">
                                        <VBox.margin>
-                                          <Insets left="100.0" top="10.0" />
+                                          <Insets left="70.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <ChoiceBox fx:id="chBuger2" prefWidth="150.0">
+                                    <ChoiceBox fx:id="chBuger2" prefWidth="100.0">
                                        <VBox.margin>
-                                          <Insets bottom="10.0" left="55.0" right="10.0" top="10.0" />
+                                          <Insets bottom="10.0" left="45.0" right="10.0" top="5.0" />
                                        </VBox.margin>
                                     </ChoiceBox>
                                  </children>
@@ -523,263 +518,263 @@
                               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                           </columnConstraints>
                           <rowConstraints>
-                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="285.0" minHeight="10.0" prefHeight="270.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="284.0" minHeight="10.0" prefHeight="265.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="281.0" minHeight="10.0" prefHeight="276.0" vgrow="SOMETIMES" />
                           </rowConstraints>
                            <children>
                               <VBox prefHeight="200.0" prefWidth="100.0">
                                  <children>
-                                    <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="100.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@../../resource/beverage/strawberrychiller.png" />
                                        </image>
                                        <VBox.margin>
-                                          <Insets left="30.0" top="10.0" />
+                                          <Insets left="30.0" top="5.0" />
                                        </VBox.margin>
                                     </ImageView>
                                     <Label text="딸기 칠러">
                                        <VBox.margin>
-                                          <Insets left="100.0" right="10.0" top="10.0" />
+                                          <Insets left="70.0" right="10.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
                                     <Label text="￦3,200">
                                        <VBox.margin>
-                                          <Insets left="100.0" top="10.0" />
+                                          <Insets left="70.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
                                     <Label text="209 Kcal">
                                        <VBox.margin>
-                                          <Insets left="100.0" top="10.0" />
+                                          <Insets left="70.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <ChoiceBox fx:id="chDrink1" prefWidth="150.0">
+                                    <ChoiceBox fx:id="chDrink1" prefWidth="100.0">
                                        <VBox.margin>
-                                          <Insets bottom="10.0" left="55.0" right="10.0" top="10.0" />
+                                          <Insets bottom="10.0" left="45.0" right="10.0" top="5.0" />
                                        </VBox.margin>
                                     </ChoiceBox>
                                  </children>
                               </VBox>
                               <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
                                  <children>
-                                    <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="100.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@../../resource/beverage/pearchiller.png" />
                                        </image>
                                        <VBox.margin>
-                                          <Insets left="30.0" top="10.0" />
+                                          <Insets left="30.0" top="5.0" />
                                        </VBox.margin>
                                     </ImageView>
                                     <Label text="배 칠러">
                                        <VBox.margin>
-                                          <Insets left="100.0" right="10.0" top="10.0" />
+                                          <Insets left="70.0" right="10.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
                                     <Label text="￦3,200">
                                        <VBox.margin>
-                                          <Insets left="100.0" top="10.0" />
+                                          <Insets left="70.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
                                     <Label text="256 Kcal">
                                        <VBox.margin>
-                                          <Insets left="100.0" top="10.0" />
+                                          <Insets left="70.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <ChoiceBox fx:id="chDrink2" prefWidth="150.0">
+                                    <ChoiceBox fx:id="chDrink2" prefWidth="100.0">
                                        <VBox.margin>
-                                          <Insets bottom="10.0" left="55.0" right="10.0" top="10.0" />
+                                          <Insets bottom="10.0" left="45.0" right="10.0" top="5.0" />
                                        </VBox.margin>
                                     </ChoiceBox>
                                  </children>
                               </VBox>
                               <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2">
                                  <children>
-                                    <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="100.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@../../resource/beverage/plumchiller.jpg" />
                                        </image>
                                        <VBox.margin>
-                                          <Insets left="30.0" top="10.0" />
+                                          <Insets left="30.0" top="5.0" />
                                        </VBox.margin>
                                     </ImageView>
                                     <Label text="자두 칠러">
                                        <VBox.margin>
-                                          <Insets left="100.0" right="10.0" top="10.0" />
+                                          <Insets left="60.0" right="10.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
                                     <Label text="￦3,200">
                                        <VBox.margin>
-                                          <Insets left="100.0" top="10.0" />
+                                          <Insets left="65.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
                                     <Label text="198 Kcal">
                                        <VBox.margin>
-                                          <Insets left="100.0" top="10.0" />
+                                          <Insets left="65.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <ChoiceBox fx:id="chDrink3" prefWidth="150.0">
+                                    <ChoiceBox fx:id="chDrink3" prefWidth="100.0">
                                        <VBox.margin>
-                                          <Insets bottom="10.0" left="55.0" right="10.0" top="10.0" />
+                                          <Insets bottom="10.0" left="45.0" right="10.0" top="5.0" />
                                        </VBox.margin>
                                     </ChoiceBox>
                                  </children>
                               </VBox>
                               <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
                                  <children>
-                                    <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="100.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@../../resource/beverage/vanillashake.jpg" />
                                        </image>
                                        <VBox.margin>
-                                          <Insets left="30.0" top="10.0" />
+                                          <Insets left="30.0" top="5.0" />
                                        </VBox.margin>
                                     </ImageView>
                                     <Label text="바닐라쉐이크">
                                        <VBox.margin>
-                                          <Insets left="80.0" right="10.0" top="10.0" />
+                                          <Insets left="50.0" right="10.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
                                     <Label text="￦3,200">
                                        <VBox.margin>
-                                          <Insets left="100.0" top="10.0" />
+                                          <Insets left="70.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
                                     <Label text="344 Kcal">
                                        <VBox.margin>
-                                          <Insets left="100.0" top="10.0" />
+                                          <Insets left="70.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <ChoiceBox fx:id="chDrink4" prefWidth="150.0">
+                                    <ChoiceBox fx:id="chDrink4" prefWidth="100.0">
                                        <VBox.margin>
-                                          <Insets bottom="10.0" left="55.0" right="10.0" top="10.0" />
+                                          <Insets bottom="10.0" left="45.0" right="10.0" top="5.0" />
                                        </VBox.margin>
                                     </ChoiceBox>
                                  </children>
                               </VBox>
                               <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                  <children>
-                                    <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="100.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@../../resource/beverage/americano.jpg" />
                                        </image>
                                        <VBox.margin>
-                                          <Insets left="30.0" top="10.0" />
+                                          <Insets left="30.0" top="5.0" />
                                        </VBox.margin>
                                     </ImageView>
                                     <Label text="아메리카노">
                                        <VBox.margin>
-                                          <Insets left="90.0" right="10.0" top="10.0" />
+                                          <Insets left="60.0" right="10.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
                                     <Label text="￦2,700">
                                        <VBox.margin>
-                                          <Insets left="100.0" top="10.0" />
+                                          <Insets left="70.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
                                     <Label text="2 Kcal">
                                        <VBox.margin>
-                                          <Insets left="110.0" top="10.0" />
+                                          <Insets left="75.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <ChoiceBox fx:id="chDrink5" prefWidth="150.0">
+                                    <ChoiceBox fx:id="chDrink5" prefWidth="100.0">
                                        <VBox.margin>
-                                          <Insets bottom="10.0" left="55.0" right="10.0" top="10.0" />
+                                          <Insets bottom="10.0" left="45.0" right="10.0" top="5.0" />
                                        </VBox.margin>
                                     </ChoiceBox>
                                  </children>
                               </VBox>
                               <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
                                  <children>
-                                    <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="100.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@../../resource/beverage/cafe%20latte.jpg" />
                                        </image>
                                        <VBox.margin>
-                                          <Insets left="30.0" top="10.0" />
+                                          <Insets left="30.0" top="5.0" />
                                        </VBox.margin>
                                     </ImageView>
                                     <Label text="카페 라떼">
                                        <VBox.margin>
-                                          <Insets left="100.0" right="10.0" top="10.0" />
+                                          <Insets left="70.0" right="10.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
                                     <Label text="￦3,200">
                                        <VBox.margin>
-                                          <Insets left="100.0" top="10.0" />
+                                          <Insets left="70.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
                                     <Label text="109 Kcal">
                                        <VBox.margin>
-                                          <Insets left="100.0" top="10.0" />
+                                          <Insets left="70.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <ChoiceBox fx:id="chDrink6" prefWidth="150.0">
+                                    <ChoiceBox fx:id="chDrink6" prefWidth="100.0">
                                        <VBox.margin>
-                                          <Insets bottom="10.0" left="55.0" right="10.0" top="10.0" />
+                                          <Insets bottom="10.0" left="45.0" right="10.0" top="5.0" />
                                        </VBox.margin>
                                     </ChoiceBox>
                                  </children>
                               </VBox>
                               <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="2">
                                  <children>
-                                    <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="100.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@../../resource/beverage/coke.jpg" />
                                        </image>
                                        <VBox.margin>
-                                          <Insets left="30.0" top="10.0" />
+                                          <Insets left="30.0" top="5.0" />
                                        </VBox.margin>
                                     </ImageView>
                                     <Label text="코카콜라">
                                        <VBox.margin>
-                                          <Insets left="100.0" right="10.0" top="10.0" />
+                                          <Insets left="70.0" right="10.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
                                     <Label text="￦2,000">
                                        <VBox.margin>
-                                          <Insets left="100.0" top="10.0" />
+                                          <Insets left="70.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
                                     <Label text="143 Kcal">
                                        <VBox.margin>
-                                          <Insets left="100.0" top="10.0" />
+                                          <Insets left="70.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <ChoiceBox fx:id="chDrink7" prefWidth="150.0">
+                                    <ChoiceBox fx:id="chDrink7" prefWidth="100.0">
                                        <VBox.margin>
-                                          <Insets bottom="10.0" left="55.0" right="10.0" top="10.0" />
+                                          <Insets bottom="10.0" left="45.0" right="10.0" top="5.0" />
                                        </VBox.margin>
                                     </ChoiceBox>
                                  </children>
                               </VBox>
                               <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                                  <children>
-                                    <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="100.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@../../resource/beverage/sprite.jpg" />
                                        </image>
                                        <VBox.margin>
-                                          <Insets left="30.0" top="10.0" />
+                                          <Insets left="30.0" top="5.0" />
                                        </VBox.margin>
                                     </ImageView>
                                     <Label text="스프라이트">
                                        <VBox.margin>
-                                          <Insets left="90.0" right="10.0" top="10.0" />
+                                          <Insets left="60.0" right="10.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
                                     <Label text="￦5,400">
                                        <VBox.margin>
-                                          <Insets left="100.0" top="10.0" />
+                                          <Insets left="70.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
                                     <Label text="149 Kcal">
                                        <VBox.margin>
-                                          <Insets left="100.0" top="10.0" />
+                                          <Insets left="70.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <ChoiceBox fx:id="chDrink8" prefWidth="150.0">
+                                    <ChoiceBox fx:id="chDrink8" prefWidth="100.0">
                                        <VBox.margin>
-                                          <Insets bottom="10.0" left="55.0" right="10.0" top="10.0" />
+                                          <Insets bottom="10.0" left="45.0" right="10.0" top="5.0" />
                                        </VBox.margin>
                                     </ChoiceBox>
                                  </children>
@@ -797,295 +792,295 @@
                               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                           </columnConstraints>
                           <rowConstraints>
-                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="285.0" minHeight="10.0" prefHeight="267.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="302.0" minHeight="10.0" prefHeight="269.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="295.0" minHeight="10.0" prefHeight="283.0" vgrow="SOMETIMES" />
                           </rowConstraints>
                            <children>
                               <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2">
                                  <children>
-                                    <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="100.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@../../resource/side/CheeseStick.jpg" />
                                        </image>
                                        <VBox.margin>
-                                          <Insets left="30.0" top="10.0" />
+                                          <Insets left="30.0" top="5.0" />
                                        </VBox.margin>
                                     </ImageView>
-                                    <Label text="골든 모짜렐라 치즈스틱 4조각">
+                                    <Label text="모짜렐라 치즈스틱 4조각">
                                        <VBox.margin>
-                                          <Insets left="30.0" right="10.0" top="10.0" />
+                                          <Insets left="15.0" right="10.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
                                     <Label text="￦4,600">
                                        <VBox.margin>
-                                          <Insets left="100.0" top="10.0" />
+                                          <Insets left="70.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
                                     <Label text="355 Kcal">
                                        <VBox.margin>
-                                          <Insets left="100.0" top="10.0" />
+                                          <Insets left="70.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <ChoiceBox fx:id="chSide3" prefWidth="150.0">
+                                    <ChoiceBox fx:id="chSide3" prefWidth="100.0">
                                        <VBox.margin>
-                                          <Insets bottom="10.0" left="55.0" right="10.0" top="10.0" />
+                                          <Insets bottom="10.0" left="45.0" right="10.0" top="5.0" />
                                        </VBox.margin>
                                     </ChoiceBox>
                                  </children>
                               </VBox>
                               <VBox prefHeight="200.0" prefWidth="100.0">
                                  <children>
-                                    <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="100.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@../../resource/side/McWing.png" />
                                        </image>
                                        <VBox.margin>
-                                          <Insets left="30.0" top="10.0" />
+                                          <Insets left="30.0" top="5.0" />
                                        </VBox.margin>
                                     </ImageView>
                                     <Label text="맥윙™ 2조각">
                                        <VBox.margin>
-                                          <Insets left="80.0" right="10.0" top="10.0" />
+                                          <Insets left="50.0" right="10.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
                                     <Label text="￦3,400">
                                        <VBox.margin>
-                                          <Insets left="100.0" top="10.0" />
+                                          <Insets left="70.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
                                     <Label text="232 Kcal">
                                        <VBox.margin>
-                                          <Insets left="100.0" top="10.0" />
+                                          <Insets left="70.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <ChoiceBox fx:id="chSide1" prefWidth="150.0">
+                                    <ChoiceBox fx:id="chSide1" prefWidth="100.0">
                                        <VBox.margin>
-                                          <Insets bottom="10.0" left="55.0" right="10.0" top="10.0" />
+                                          <Insets bottom="10.0" left="45.0" right="10.0" top="5.0" />
                                        </VBox.margin>
                                     </ChoiceBox>
                                  </children>
                               </VBox>
                               <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
                                  <children>
-                                    <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="100.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@../../resource/side/ShanghaiChickenSnackWrap.jpg" />
                                        </image>
                                        <VBox.margin>
-                                          <Insets left="30.0" top="10.0" />
+                                          <Insets left="30.0" top="5.0" />
                                        </VBox.margin>
                                     </ImageView>
                                     <Label text="상하이 치킨 스낵랩">
                                        <VBox.margin>
-                                          <Insets left="60.0" right="10.0" top="10.0" />
+                                          <Insets left="30.0" right="10.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
                                     <Label text="￦2,700">
                                        <VBox.margin>
-                                          <Insets left="100.0" top="10.0" />
+                                          <Insets left="70.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
                                     <Label text="280 Kcal">
                                        <VBox.margin>
-                                          <Insets left="100.0" top="10.0" />
+                                          <Insets left="70.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <ChoiceBox fx:id="chSide4" prefWidth="150.0">
+                                    <ChoiceBox fx:id="chSide4" prefWidth="100.0">
                                        <VBox.margin>
-                                          <Insets bottom="10.0" left="55.0" right="10.0" top="10.0" />
+                                          <Insets bottom="10.0" left="45.0" right="10.0" top="5.0" />
                                        </VBox.margin>
                                     </ChoiceBox>
                                  </children>
                               </VBox>
                               <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
                                  <children>
-                                    <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="100.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@../../resource/side/StringCheese.png" />
                                        </image>
                                        <VBox.margin>
-                                          <Insets left="30.0" top="10.0" />
+                                          <Insets left="30.0" top="5.0" />
                                        </VBox.margin>
                                     </ImageView>
                                     <Label text="스트링 치즈">
                                        <VBox.margin>
-                                          <Insets left="90.0" right="10.0" top="10.0" />
+                                          <Insets left="60.0" right="10.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
                                     <Label text="￦2,300">
                                        <VBox.margin>
-                                          <Insets left="100.0" top="10.0" />
+                                          <Insets left="70.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
                                     <Label text="50 Kcal">
                                        <VBox.margin>
-                                          <Insets left="105.0" top="10.0" />
+                                          <Insets left="75.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <ChoiceBox fx:id="chSide2" prefWidth="150.0">
+                                    <ChoiceBox fx:id="chSide2" prefWidth="100.0">
                                        <VBox.margin>
-                                          <Insets bottom="10.0" left="55.0" right="10.0" top="10.0" />
+                                          <Insets bottom="10.0" left="45.0" right="10.0" top="5.0" />
                                        </VBox.margin>
                                     </ChoiceBox>
                                  </children>
                               </VBox>
                               <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                  <children>
-                                    <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="100.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@../../resource/side/FrenchFries.jpg" />
                                        </image>
                                        <VBox.margin>
-                                          <Insets left="30.0" top="10.0" />
+                                          <Insets left="30.0" top="5.0" />
                                        </VBox.margin>
                                     </ImageView>
                                     <Label text="후렌치 후라이">
                                        <VBox.margin>
-                                          <Insets left="80.0" right="10.0" top="10.0" />
+                                          <Insets left="50.0" right="10.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
                                     <Label text="￦2,300">
                                        <VBox.margin>
-                                          <Insets left="100.0" top="10.0" />
+                                          <Insets left="70.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
                                     <Label text="368 Kcal">
                                        <VBox.margin>
-                                          <Insets left="100.0" top="10.0" />
+                                          <Insets left="70.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <ChoiceBox fx:id="chSide5" prefWidth="150.0">
+                                    <ChoiceBox fx:id="chSide5" prefWidth="100.0">
                                        <VBox.margin>
-                                          <Insets bottom="10.0" left="55.0" right="10.0" top="10.0" />
+                                          <Insets bottom="10.0" left="45.0" right="10.0" top="5.0" />
                                        </VBox.margin>
                                     </ChoiceBox>
                                  </children>
                               </VBox>
                               <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
                                  <children>
-                                    <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="100.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@../../resource/dessert/ApplePie.jpg" />
                                        </image>
                                        <VBox.margin>
-                                          <Insets left="30.0" top="10.0" />
+                                          <Insets left="30.0" top="5.0" />
                                        </VBox.margin>
                                     </ImageView>
                                     <Label text="애플파이">
                                        <VBox.margin>
-                                          <Insets left="100.0" right="10.0" top="10.0" />
+                                          <Insets left="70.0" right="10.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
                                     <Label text="￦1,700">
                                        <VBox.margin>
-                                          <Insets left="100.0" top="10.0" />
+                                          <Insets left="70.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
                                     <Label text="204 Kcal">
                                        <VBox.margin>
-                                          <Insets left="100.0" top="10.0" />
+                                          <Insets left="70.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <ChoiceBox fx:id="chSide6" prefWidth="150.0">
+                                    <ChoiceBox fx:id="chSide6" prefWidth="100.0">
                                        <VBox.margin>
-                                          <Insets bottom="10.0" left="55.0" right="10.0" top="10.0" />
+                                          <Insets bottom="10.0" left="45.0" right="10.0" top="5.0" />
                                        </VBox.margin>
                                     </ChoiceBox>
                                  </children>
                               </VBox>
                               <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="2">
                                  <children>
-                                    <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="100.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@../../resource/dessert/OreoMcFlurry.png" />
                                        </image>
                                        <VBox.margin>
-                                          <Insets left="30.0" top="10.0" />
+                                          <Insets left="30.0" top="5.0" />
                                        </VBox.margin>
                                     </ImageView>
                                     <Label text="오레오 맥플러리">
                                        <VBox.margin>
-                                          <Insets left="80.0" right="10.0" top="10.0" />
+                                          <Insets left="45.0" right="10.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
                                     <Label text="￦3,200">
                                        <VBox.margin>
-                                          <Insets left="100.0" top="10.0" />
+                                          <Insets left="70.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
                                     <Label text="322 Kcal">
                                        <VBox.margin>
-                                          <Insets left="100.0" top="10.0" />
+                                          <Insets left="70.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <ChoiceBox fx:id="chSide7" prefWidth="150.0">
+                                    <ChoiceBox fx:id="chSide7" prefWidth="100.0">
                                        <VBox.margin>
-                                          <Insets bottom="10.0" left="55.0" right="10.0" top="10.0" />
+                                          <Insets bottom="10.0" left="45.0" right="10.0" top="5.0" />
                                        </VBox.margin>
                                     </ChoiceBox>
                                  </children>
                               </VBox>
                               <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                                  <children>
-                                    <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="100.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@../../resource/dessert/CaramelSundae.jpg" />
                                        </image>
                                        <VBox.margin>
-                                          <Insets left="30.0" top="10.0" />
+                                          <Insets left="30.0" top="5.0" />
                                        </VBox.margin>
                                     </ImageView>
                                     <Label text="카라멜 선데이 아이스크림">
                                        <VBox.margin>
-                                          <Insets left="45.0" right="10.0" top="10.0" />
+                                          <Insets left="15.0" right="10.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
                                     <Label text="￦2,200">
                                        <VBox.margin>
-                                          <Insets left="100.0" top="10.0" />
+                                          <Insets left="70.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
                                     <Label text="306 Kcal">
                                        <VBox.margin>
-                                          <Insets left="100.0" top="10.0" />
+                                          <Insets left="70.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <ChoiceBox fx:id="chSide8" prefWidth="150.0">
+                                    <ChoiceBox fx:id="chSide8" prefWidth="100.0">
                                        <VBox.margin>
-                                          <Insets bottom="10.0" left="55.0" right="10.0" top="10.0" />
+                                          <Insets bottom="10.0" left="45.0" right="10.0" top="5.0" />
                                        </VBox.margin>
                                     </ChoiceBox>
                                  </children>
                               </VBox>
                               <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
                                  <children>
-                                    <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="100.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@../../resource/dessert/VanillaSundae.jpg" />
                                        </image>
                                        <VBox.margin>
-                                          <Insets left="30.0" top="10.0" />
+                                          <Insets left="30.0" top="5.0" />
                                        </VBox.margin>
                                     </ImageView>
                                     <Label text="바닐라 선데이 아이스크림">
                                        <VBox.margin>
-                                          <Insets left="45.0" right="10.0" top="10.0" />
+                                          <Insets left="15.0" right="10.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
                                     <Label text="￦2,200">
                                        <VBox.margin>
-                                          <Insets left="100.0" top="10.0" />
+                                          <Insets left="70.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
                                     <Label text="186 Kcal">
                                        <VBox.margin>
-                                          <Insets left="100.0" top="10.0" />
+                                          <Insets left="70.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <ChoiceBox fx:id="chSide9" prefWidth="150.0">
+                                    <ChoiceBox fx:id="chSide9" prefWidth="100.0">
                                        <VBox.margin>
-                                          <Insets bottom="10.0" left="55.0" right="10.0" top="10.0" />
+                                          <Insets bottom="10.0" left="45.0" right="10.0" top="5.0" />
                                        </VBox.margin>
                                     </ChoiceBox>
                                  </children>
@@ -1100,34 +1095,34 @@
          <top>
             <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                <children>
-                  <ImageView fitHeight="120.0" fitWidth="137.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="110.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../resource/main/logo.png" />
                      </image>
                      <HBox.margin>
-                        <Insets bottom="10.0" left="30.0" right="20.0" top="20.0" />
+                        <Insets bottom="10.0" left="30.0" right="10.0" top="10.0" />
                      </HBox.margin>
                   </ImageView>
-                  <Button mnemonicParsing="false" onAction="#selectProc" prefHeight="70.0" prefWidth="100.0" text="선택완료">
+                  <Button mnemonicParsing="false" onAction="#selectProc" prefHeight="40.0" prefWidth="100.0" text="선택완료">
                      <padding>
-                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                      </padding>
                      <HBox.margin>
-                        <Insets left="450.0" top="30.0" />
+                        <Insets left="170.0" top="50.0" />
                      </HBox.margin>
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" onAction="#cancelProc" prefHeight="70.0" prefWidth="100.0" text="취소">
+                  <Button mnemonicParsing="false" onAction="#cancelProc" prefHeight="40.0" prefWidth="100.0" text="취소">
                      <font>
                         <Font size="18.0" />
                      </font>
                      <padding>
-                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                      </padding>
                      <HBox.margin>
-                        <Insets left="30.0" top="30.0" />
+                        <Insets left="30.0" top="50.0" />
                      </HBox.margin>
                   </Button>
                </children>
