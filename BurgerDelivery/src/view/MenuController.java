@@ -502,13 +502,10 @@ public class MenuController extends Controller implements Initializable {
 			goods.add("맥딜리버리 상하이 버거 싱글팩,11000,"+setLabel3.getText());
 		}
 		if(!setLabel4.getText().equals("0")) {
-			goods.add("맥치킨ⓡ 모짜렐라,6900,"+setLabel4.getText());
+			goods.add("맥치킨ⓡ 모짜렐라 세트,6900,"+setLabel4.getText());
 		}
 		if(!setLabel5.getText().equals("0")) {
-			goods.add("맥치킨ⓡ 모짜렐라,6900,"+setLabel5.getText());
-		}
-		if(!setLabel5.getText().equals("0")) {
-			goods.add("맥치킨ⓡ 모짜렐라,6900,"+setLabel5.getText());
+			goods.add("1955 버거 세트,8000,"+setLabel5.getText());
 		}
 		if(!setLabel6.getText().equals("0")) {
 			goods.add("맥딜리버리 빅맥ⓡ 싱글팩,11000,"+setLabel6.getText());

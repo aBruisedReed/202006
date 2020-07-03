@@ -36,37 +36,10 @@ public class CheckOrderController extends Controller implements Initializable{
 		comSrv.WindowClose(event);
 	}
 	
-	public void onCheckOrder() { //삭제
-//		SingletonData sd = SingletonData.getInstance();
-//		
-//		Label paidPrice = (Label) root.lookup("#paidPrice");
-//		Label paidHow = (Label) root.lookup("#paidHow");
-//		
-//		paidPrice.setText("합계금액 : "+sd.getTotalPrice());
-//		paidHow.setText("결제수단 : "+sd.getPaidHow());
-//		
-//		ArrayList<String> goodsList = (ArrayList<String>) sd.getGoods();
-//		
-//		TableView<Goods> tv = (TableView<Goods>) root.lookup("#orderTableView");
-//
-//		TableColumn nameColumn = new TableColumn("상품명");
-//		nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
-//		TableColumn priceColumn = new TableColumn("가격");
-//		priceColumn.setCellValueFactory(new PropertyValueFactory<>("price"));
-//		TableColumn amountColumn = new TableColumn("수량");
-//		amountColumn.setCellValueFactory(new PropertyValueFactory<>("amount"));
-//		
-//		nameColumn.setPrefWidth(340);
-//		tv.getColumns().addAll(nameColumn, priceColumn, amountColumn);
-//		
-//		DecimalFormat formatter = new DecimalFormat("###,###");
-//		for(String good : goodsList) {
-//			String[] goodDetail = good.split(",");
-//			Goods goods = new Goods();
-//			goods.setName(goodDetail[0]);
-//			goods.setPrice(formatter.format(Integer.parseInt(goodDetail[1])));
-//			goods.setAmount(Integer.parseInt(goodDetail[2]));
-//			tv.getItems().add(goods);
-//		}
+	public void orderCancelProc(ActionEvent event) {
+		SingletonData sd = SingletonData.getInstance();
+		sd.setOrdered(false);
+		comSrv.ErrorMsg("주문 취소", "주문 취소", "주문 취소가 완료됬습니다.");
+		comSrv.WindowClose(event);
 	}
 }

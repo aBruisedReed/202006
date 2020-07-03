@@ -54,7 +54,7 @@ public class AfterLoginController extends Controller implements Initializable {
 		Stage orderCheck = new Stage();
 		SingletonData sd = SingletonData.getInstance();
 		if(!sd.getOrdered()) {
-			comSrv.ErrorMsg("결제된 주문이 없습니다.");
+			comSrv.ErrorMsg("주문 내역 없음", "주문 내역 없음", "결제된 주문이 없습니다.");
 			return;
 		}
 		Parent form = comSrv.showWindow(orderCheck, "../view/ShowOrder.fxml");
